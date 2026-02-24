@@ -14,14 +14,14 @@ const ProblemSection = () => {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8 }}
-          >
+            transition={{ duration: 0.8 }}>
+
             <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-8 leading-snug">
               A saúde se tornou fragmentada.
             </h2>
             <div className="gold-line !mx-0 mb-8" />
-            <p className="font-sans text-muted-foreground text-lg leading-relaxed mb-6">
-              Hoje, consultas rápidas, excesso de exames e múltiplos especialistas geram insegurança, medicalização desnecessária e falta de coordenação.
+            <p className="font-sans text-muted-foreground text-lg leading-relaxed mb-6">Hoje o cuidado com a saúde se baseia em consultas rápidas, excesso de exames e múltiplos especialistas geram insegurança, medicalização desnecessária e, principalmente, falta de coordenação.
+
             </p>
             <p className="font-sans text-foreground text-lg leading-relaxed font-light italic">
               A maioria das pessoas não precisa de mais exames.
@@ -34,19 +34,19 @@ const ProblemSection = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
-          >
+            className="relative">
+
             <img
               src={problemImage}
               alt="Papéis médicos e prescrições espalhadas sobre uma mesa"
               className="w-full h-[400px] object-cover"
-              loading="lazy"
-            />
+              loading="lazy" />
+
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default ProblemSection;
