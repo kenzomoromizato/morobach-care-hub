@@ -3,7 +3,7 @@ import { useRef } from "react";
 import forWhomImage from "@/assets/for-whom-section.jpg";
 
 const items = [
-  "Adultos 40+ que desejam prevenção estruturada",
+  "Adultos saudáveis que desejam prevenção estruturada",
   "Idosos independentes que desejam segurança em sua saúde",
   "Famílias que querem organizar o cuidado dos pais",
   "Pessoas que valorizam medicina baseada em ciência",
