@@ -1,13 +1,30 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/landing/Navbar";
+import HeroSection from "@/components/landing/HeroSection";
+import ProblemSection from "@/components/landing/ProblemSection";
+import AboutSection from "@/components/landing/AboutSection";
+import CareModelSection from "@/components/landing/CareModelSection";
+import ForWhomSection from "@/components/landing/ForWhomSection";
+import DifferentialSection from "@/components/landing/DifferentialSection";
+import HowItWorksSection from "@/components/landing/HowItWorksSection";
+import ExperienceSection from "@/components/landing/ExperienceSection";
+import CTASection from "@/components/landing/CTASection";
+import Footer from "@/components/landing/Footer";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="overflow-x-hidden">
+      <Navbar />
+      <HeroSection />
+      <ProblemSection />
+      <AboutSection />
+      <CareModelSection />
+      <ForWhomSection />
+      <DifferentialSection />
+      <HowItWorksSection />
+      <ExperienceSection />
+      <CTASection />
+      <Footer />
+    </main>
   );
 };
 
