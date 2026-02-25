@@ -24,8 +24,12 @@ const Footer = () => {
           </a>
         </div>
 
-        <p className="font-serif text-sm text-muted-foreground italic">
+        <p className="font-serif text-sm text-muted-foreground italic mb-6">
           Morobach — Medicina preventiva onde a vida acontece.
+        </p>
+
+        <p className="font-sans text-xs text-muted-foreground/60">
+          © {new Date().getFullYear()} Morobach. Todos os direitos reservados.
         </p>
       </div>
     </footer>
