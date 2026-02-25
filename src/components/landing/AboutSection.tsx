@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import modelImage from "@/assets/morobach-model.jpg";
+import emotionalImage from "@/assets/emotional-section.jpg";
 
 const AboutSection = () => {
   const ref = useRef(null);
@@ -15,39 +15,63 @@ const AboutSection = () => {
             initial={{ opacity: 0, x: -30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="order-2 md:order-1">
-
+            className="order-2 md:order-1"
+          >
             <img
-              src={modelImage}
-              alt="Médico revisando prontuário digital em tablet"
-              className="w-full h-[450px] object-cover"
-              loading="lazy" />
-
+              src={emotionalImage}
+              alt="Filha segurando as mãos da mãe idosa com carinho"
+              className="w-full h-[520px] object-cover"
+              loading="lazy"
+            />
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="order-1 md:order-2">
-
+            className="order-1 md:order-2"
+          >
             <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-8 leading-snug">
-              A evolução da medicina domiciliar.
+              Cuidar é também preservar histórias.
             </h2>
             <div className="gold-line !mx-0 mb-8" />
+
             <p className="font-sans text-muted-foreground text-lg leading-relaxed mb-6">
-              A Morobach resgata o cuidado médico próximo, contínuo e personalizado — com rigor científico moderno.
+              Existe um momento da vida em que começamos a olhar para os nossos pais com outros olhos.
             </p>
-            <p className="font-sans text-foreground text-lg leading-relaxed font-light italic">Não oferecemos check-ups genéricos.
-Oferecemos organização e promoção da saúde, redução de riscos e acompanhamento estruturado.
-              <br />
-              Oferecemos organização da saúde, redução de riscos e acompanhamento estruturado.
+
+            <p className="font-sans text-foreground text-base leading-relaxed mb-6">
+              Pequenos esquecimentos.<br />
+              Exames acumulados.<br />
+              Consultas desencontradas.
+            </p>
+
+            <p className="font-sans text-primary text-lg leading-relaxed italic mb-6">
+              E surge uma pergunta silenciosa:<br />
+              <span className="font-medium">Estamos organizando a saúde da forma certa?</span>
+            </p>
+
+            <p className="font-sans text-muted-foreground text-base leading-relaxed mb-6">
+              Para quem tem mais de 40 anos, a sensação é semelhante.<br />
+              A vida está estável.<br />
+              Mas a saúde começa a exigir planejamento.
+            </p>
+
+            <p className="font-sans text-foreground text-base leading-relaxed mb-6">
+              Cuidar não é apenas tratar doenças.<br />
+              É proteger autonomia.<br />
+              É manter independência.<br />
+              É evitar decisões apressadas.
+            </p>
+
+            <p className="font-sans text-foreground text-lg leading-relaxed font-light italic">
+              Prevenção é responsabilidade com o futuro.
             </p>
           </motion.div>
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default AboutSection;
