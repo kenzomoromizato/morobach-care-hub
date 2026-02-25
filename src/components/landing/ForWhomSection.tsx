@@ -33,7 +33,7 @@ const ForWhomSection = () => {
           className="text-center mb-16"
         >
           <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
-            Por que esse modelo faz sentido
+            Porquê esse modelo faz sentido
           </h2>
           <div className="gold-line mb-10" />
           <p className="font-sans text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
