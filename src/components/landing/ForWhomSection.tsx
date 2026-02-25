@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { AlertTriangle, TrendingDown } from "lucide-react";
-
+import forWhomBg from "@/assets/for-whom-bg.jpg";
 const problems = [
   "Idas desnecessárias ao pronto atendimento",
   "Exames repetidos",
@@ -16,8 +16,16 @@ const ForWhomSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-28 md:py-36 bg-warm-beige">
-      <div ref={ref} className="container max-w-5xl mx-auto px-6">
+    <section
+      className="py-28 md:py-36 relative bg-warm-beige"
+      style={{
+        backgroundImage: `url(${forWhomBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="absolute inset-0 bg-warm-beige/85 backdrop-blur-sm" />
+      <div ref={ref} className="container max-w-5xl mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
