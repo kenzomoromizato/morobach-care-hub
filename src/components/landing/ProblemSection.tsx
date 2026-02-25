@@ -58,26 +58,9 @@ const ProblemSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="max-w-2xl mx-auto"
+          className="text-center"
         >
-          <p className="font-sans text-muted-foreground text-base mb-6 text-center">
-            Você vai entender:
-          </p>
-          <ul className="space-y-4 mb-10">
-            {points.map((point, i) => (
-              <motion.li
-                key={i}
-                initial={{ opacity: 0, x: -15 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.5 + i * 0.1 }}
-                className="flex items-start gap-3 font-sans text-foreground text-lg"
-              >
-                <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0" />
-                {point}
-              </motion.li>
-            ))}
-          </ul>
-          <p className="font-sans text-foreground text-lg leading-relaxed font-light italic text-center">
+          <p className="font-sans text-foreground text-lg leading-relaxed font-light italic">
             A saúde pode ser planejada.
           </p>
         </motion.div>
