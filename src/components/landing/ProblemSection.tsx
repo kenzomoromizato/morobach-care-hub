@@ -1,52 +1,89 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import problemImage from "@/assets/problem-section.jpg";
+import { Play } from "lucide-react";
 
 const ProblemSection = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
+  const points = [
+    "Como funciona o acompanhamento contínuo",
+    "O que significa coordenação do cuidado",
+    "Para quem esse modelo é indicado",
+    "Como organizamos a saúde de forma estruturada",
+  ];
+
   return (
     <section className="py-28 md:py-36 bg-background">
-      <div ref={ref} className="container max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8 }}>
+      <div ref={ref} className="container max-w-5xl mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6 leading-snug">
+            Conheça a proposta da Morobach
+          </h2>
+          <div className="gold-line mb-8" />
+          <p className="font-sans text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
+            Neste vídeo, explico como a medicina domiciliar preventiva é diferente do modelo tradicional de consultas rápidas e check-ups genéricos.
+          </p>
+        </motion.div>
 
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-8 leading-snug">
-              A saúde se tornou fragmentada.
-            </h2>
-            <div className="gold-line !mx-0 mb-8" />
-            <p className="font-sans text-muted-foreground text-lg leading-relaxed mb-6">Hoje o cuidado com a saúde se baseia em consultas rápidas, excesso de exames e múltiplos especialistas geram insegurança, medicalização desnecessária e, principalmente, falta de coordenação.
+        {/* Video Embed Area */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={inView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="relative w-full aspect-video rounded-sm overflow-hidden mb-16 shadow-[0_20px_60px_-15px_hsl(var(--deep-brown)/0.2)]"
+          style={{
+            background: "linear-gradient(135deg, hsl(var(--deep-brown)), hsl(var(--deep-brown) / 0.85))",
+          }}
+        >
+          {/* Placeholder — replace the div below with an iframe to embed the video */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+            <div className="w-20 h-20 rounded-full border-2 border-primary/60 flex items-center justify-center bg-primary/10 backdrop-blur-sm">
+              <Play className="w-8 h-8 text-primary ml-1" />
+            </div>
+            <span className="text-primary-foreground/70 font-sans text-sm tracking-wide uppercase">
+              Vídeo em breve
+            </span>
+          </div>
+        </motion.div>
 
-            </p>
-            <p className="font-sans text-foreground text-lg leading-relaxed font-light italic">
-              A maioria das pessoas não precisa de mais exames.
-              <br />
-              Precisa de direção, organização e prevenção baseada em evidência.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative">
-
-            <img
-              src={problemImage}
-              alt="Papéis médicos e prescrições espalhadas sobre uma mesa"
-              className="w-full h-[400px] object-cover"
-              loading="lazy" />
-
-          </motion.div>
-        </div>
+        {/* Points */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="max-w-2xl mx-auto"
+        >
+          <p className="font-sans text-muted-foreground text-base mb-6 text-center">
+            Você vai entender:
+          </p>
+          <ul className="space-y-4 mb-10">
+            {points.map((point, i) => (
+              <motion.li
+                key={i}
+                initial={{ opacity: 0, x: -15 }}
+                animate={inView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.5 + i * 0.1 }}
+                className="flex items-start gap-3 font-sans text-foreground text-lg"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 shrink-0" />
+                {point}
+              </motion.li>
+            ))}
+          </ul>
+          <p className="font-sans text-foreground text-lg leading-relaxed font-light italic text-center">
+            A saúde pode ser planejada.
+          </p>
+        </motion.div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default ProblemSection;
