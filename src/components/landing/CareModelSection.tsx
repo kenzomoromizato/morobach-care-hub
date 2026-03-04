@@ -42,7 +42,7 @@ const CareModelSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-28 md:py-36 bg-background">
+    <section id="modelo" className="py-28 md:py-36 bg-background">
       <div ref={ref} className="container max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
