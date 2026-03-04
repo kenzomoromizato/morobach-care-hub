@@ -13,28 +13,27 @@ const highlights = [
   },
   {
     title: "Coordenação do cuidado",
-    desc: "Organização de exames, especialistas e condutas em um plano único e coerente.",
+    desc: "Organização de exames e condutas em um plano único e coerente.",
   },
   {
     title: "Acompanhamento contínuo",
-    desc: "Revisões periódicas para ajustar o plano conforme sua rotina e seus resultados.",
+    desc: "Revisões periódicas para ajustar o plano conforme sua rotina e resultados.",
   },
 ];
 
-const ExperienceSection = () => {
+export default function ExperienceSection() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="experiencia" className="py-28 md:py-36 bg-warm-beige">
+    <section id="experiencia" className="py-24 md:py-32 bg-warm-beige">
       <div ref={ref} className="container max-w-6xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.7 }}
           className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center"
         >
-          {/* Texto */}
           <div>
             <p className="font-sans text-xs tracking-[0.3em] uppercase text-muted-foreground mb-5">
               Experiência Morobach
@@ -49,34 +48,30 @@ const ExperienceSection = () => {
             <div className="gold-line my-10" />
 
             <p className="font-sans text-muted-foreground text-lg leading-relaxed">
-              O objetivo não é “resolver tudo em um dia”.
-              É construir uma linha de cuidado que funcione no mundo real — na sua casa,
-              na sua rotina, com decisões bem orientadas e acompanhamento consistente.
+              O objetivo não é “resolver tudo em um dia”. É construir uma linha de cuidado que funcione
+              na vida real — na sua casa, na sua rotina, com decisões bem orientadas e acompanhamento consistente.
             </p>
 
             <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5">
               {highlights.map((h, i) => (
                 <motion.div
                   key={h.title}
-                  initial={{ opacity: 0, y: 14 }}
+                  initial={{ opacity: 0, y: 12 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.6, delay: 0.2 + i * 0.08 }}
+                  transition={{ duration: 0.55, delay: 0.15 + i * 0.08 }}
                   className="rounded-2xl border border-border bg-background/60 p-6 shadow-sm"
                 >
                   <h3 className="font-serif text-lg text-foreground">{h.title}</h3>
-                  <p className="font-sans text-muted-foreground mt-3 leading-relaxed">
-                    {h.desc}
-                  </p>
+                  <p className="font-sans text-muted-foreground mt-3 leading-relaxed">{h.desc}</p>
                 </motion.div>
               ))}
             </div>
           </div>
 
-          {/* Imagem */}
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             animate={inView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.8, delay: 0.15 }}
+            transition={{ duration: 0.75, delay: 0.1 }}
             className="relative rounded-3xl overflow-hidden shadow-lg"
           >
             <img
@@ -100,6 +95,4 @@ const ExperienceSection = () => {
       </div>
     </section>
   );
-};
-
-export default ExperienceSection;
+}
