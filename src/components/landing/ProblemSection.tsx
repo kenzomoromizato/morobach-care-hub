@@ -27,8 +27,8 @@ const ProblemSection = () => {
             Conheça a proposta da Morobach
           </h2>
           <div className="gold-line mb-8" />
-          <p className="font-sans text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
-            Neste vídeo, explico como a medicina domiciliar preventiva é diferente do modelo tradicional de consultas rápidas e check-ups genéricos.
+          <p className="font-sans text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">Neste vídeo, explico melhor qual a nossa intenção com o modelo de medicina domiciliar e quais os seus benefícios.
+
           </p>
         </motion.div>
 
