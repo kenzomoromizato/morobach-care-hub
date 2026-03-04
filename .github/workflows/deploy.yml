@@ -38,19 +38,29 @@ jobs:
           </IfModule>
           EOF
 
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          port: 21
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASS }}
-          local-dir: dist/
-          server-dir: public_html/
-          dangerous-clean-slate: false
-          dry-run: false
-          log-level: verbose
-          exclude: |
-            **/.git*
-            **/.github/**
-            **/node_modules/**
+      - name: Deploy via FTPS
+  uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+  with:
+    server: ${{ secrets.FTP_HOST }}
+    username: ${{ secrets.FTP_USER }}
+    password: ${{ secrets.FTP_PASS }}
+
+    protocol: ftps
+    port: 21
+
+    # Dá mais tempo para abrir a conexão (evita "Timeout (control socket)")
+    timeout: 60000
+
+    # Tolerância para certificados/handshake FTPS em hosts compartilhados
+    security: loose
+
+    local-dir: dist/
+    server-dir: public_html/
+
+    dangerous-clean-slate: false
+    dry-run: false
+    log-level: verbose
+    exclude: |
+      **/.git*
+      **/.github/**
+      **/node_modules/**
