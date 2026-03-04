@@ -33,26 +33,26 @@ const steps = [
   },
 ];
 
-const HowItWorksSection = () => {
+export default function HowItWorksSection() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="como-funciona" className="py-28 md:py-36 bg-background">
+    <section id="como-funciona" className="py-24 md:py-32 bg-background">
       <div ref={ref} className="container max-w-6xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.7 }}
+          className="text-center mb-14"
         >
-          <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
+          <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-5">
             Como funciona na prática
           </h2>
-          <div className="gold-line mb-10" />
+          <div className="gold-line mb-8" />
           <p className="font-sans text-muted-foreground text-lg leading-relaxed max-w-2xl mx-auto">
-            Um processo simples, mas estruturado — para transformar cuidado médico em
-            rotina sustentável, sem improviso.
+            Um processo simples, porém estruturado — para transformar cuidado médico em rotina,
+            sem improviso.
           </p>
         </motion.div>
 
@@ -62,10 +62,10 @@ const HowItWorksSection = () => {
             return (
               <motion.div
                 key={step.number}
-                initial={{ opacity: 0, y: 18 }}
+                initial={{ opacity: 0, y: 16 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.7, delay: 0.15 + i * 0.1 }}
-                className="group rounded-2xl border border-border bg-background/60 p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow"
+                transition={{ duration: 0.6, delay: 0.12 + i * 0.08 }}
+                className="rounded-2xl border border-border bg-background/60 p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="flex items-start justify-between gap-6">
                   <div className="flex items-center gap-4">
@@ -103,6 +103,4 @@ const HowItWorksSection = () => {
       </div>
     </section>
   );
-};
-
-export default HowItWorksSection;
+}
