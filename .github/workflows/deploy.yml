@@ -46,7 +46,7 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
           local-dir: dist/
-          server-dir: /
+          server-dir: public_html/
           dangerous-clean-slate: false
           dry-run: false
           log-level: verbose
@@ -54,12 +54,3 @@ jobs:
             **/.git*
             **/.github/**
             **/node_modules/**
-
-
-
-
-
-
-FTP_HOST	ftp.morobach.com.br
-FTP_USER	u204877819.deploygithub
-FTP_PASS	Kmoromizato098!
