@@ -1,9 +1,13 @@
-name: Deploy Lovable via FTP na Hostinger
+name: Deploy Lovable via FTPS na Hostinger
 
 on:
   push:
     branches: ["main"]
   workflow_dispatch: {}
+
+concurrency:
+  group: deploy-hostinger
+  cancel-in-progress: true
 
 jobs:
   build-and-deploy:
@@ -39,28 +43,25 @@ jobs:
           EOF
 
       - name: Deploy via FTPS
-  uses: SamKirkland/FTP-Deploy-Action@v4.3.6
-  with:
-    server: ${{ secrets.FTP_HOST }}
-    username: ${{ secrets.FTP_USER }}
-    password: ${{ secrets.FTP_PASS }}
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
 
-    protocol: ftps
-    port: 21
+          protocol: ftps
+          port: 21
 
-    # Dá mais tempo para abrir a conexão (evita "Timeout (control socket)")
-    timeout: 60000
+          timeout: 60000
+          security: loose
 
-    # Tolerância para certificados/handshake FTPS em hosts compartilhados
-    security: loose
+          local-dir: dist/
+          server-dir: public_html/
 
-    local-dir: dist/
-    server-dir: public_html/
-
-    dangerous-clean-slate: false
-    dry-run: false
-    log-level: verbose
-    exclude: |
-      **/.git*
-      **/.github/**
-      **/node_modules/**
+          dangerous-clean-slate: false
+          dry-run: false
+          log-level: verbose
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/node_modules/**
