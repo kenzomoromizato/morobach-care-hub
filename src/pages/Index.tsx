@@ -9,6 +9,7 @@ import HowItWorksSection from "@/components/landing/HowItWorksSection";
 import ExperienceSection from "@/components/landing/ExperienceSection";
 import CTASection from "@/components/landing/CTASection";
 import Footer from "@/components/landing/Footer";
+import WhoIsItForSection from "@/components/landing/WhoIsItForSection";
 
 const Index = () => {
   return (
