@@ -58,7 +58,7 @@ jobs:
           local-dir: dist/
           server-dir: /
 
-          dangerous-clean-slate: false
+          dangerous-clean-slate: true
           dry-run: false
           log-level: verbose
           exclude: |
