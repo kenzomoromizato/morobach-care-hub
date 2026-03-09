@@ -17,7 +17,6 @@ const Index = () => {
       <AboutSection />
       <CareModelSection />
       <WhoIsItForSection />
-      <DifferentialSection />
       <HowItWorksSection />
       <ExperienceSection />
       <CTASection />
