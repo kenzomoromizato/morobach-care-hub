@@ -15,12 +15,12 @@ const Index = () => {
     <main className="overflow-x-hidden">
       <Navbar />
       <HeroSection />
-      <AboutSection />
       <CareModelSection />
       <HowMembershipWorksSection />
       <WhoIsItForSection />
       <HowItWorksSection />
       <ExperienceSection />
+      <AboutSection />
       <CTASection />
       <Footer />
     </main>
