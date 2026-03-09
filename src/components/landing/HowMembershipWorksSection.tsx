@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 
 const items = [
-  const items = [
   {
     title: "Pré-consulta por telemedicina",
     desc: "Antes da primeira visita domiciliar, é realizada uma conversa por vídeo para compreender melhor a família, identificar demandas específicas e orientar eventuais exames prévios.",
