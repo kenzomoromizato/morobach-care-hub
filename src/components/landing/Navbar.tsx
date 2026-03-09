@@ -24,7 +24,7 @@ const Navbar = () => {
   <img
     src="/morobach-logo-horizontal.png"
     alt="Morobach"
-    className="h-32 md:h-36 w-auto object-contain"
+    className="h-24 md:h-28 w-auto object-contain"
   />
 </a>
 
