@@ -26,7 +26,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="font-serif text-5xl md:text-7xl text-primary-foreground font-medium leading-tight mb-8">
 
-          Medicina onde a vida acontece.
+          Um médico de família para cuidar da saúde da sua casa.
         </motion.h1>
 
         <motion.p
@@ -34,7 +34,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-primary-foreground/80 font-sans text-lg md:text-xl font-light max-w-2xl mx-auto mb-12 leading-relaxed">
-          A Morobach oferece acompanhamento médico em Brasília com foco em prevenção baseada em evidências, coordenação do cuidado e planejamento de saúde — no conforto da sua casa.
+          A Morobach oferece acompanhamento médico domiciliar contínuo para toda a família, com prevenção, promoção de saúde e coordenação do cuidado ao longo do tempo — no conforto da sua casa.
 
         </motion.p>
 
