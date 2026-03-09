@@ -1,6 +1,5 @@
 import Navbar from "@/components/landing/Navbar";
 import HeroSection from "@/components/landing/HeroSection";
-import ProblemSection from "@/components/landing/ProblemSection";
 import AboutSection from "@/components/landing/AboutSection";
 import CareModelSection from "@/components/landing/CareModelSection";
 import ForWhomSection from "@/components/landing/ForWhomSection";
@@ -16,7 +15,6 @@ const Index = () => {
     <main className="overflow-x-hidden">
       <Navbar />
       <HeroSection />
-      <ProblemSection />
       <AboutSection />
       <CareModelSection />
       <WhoIsItForSection />
