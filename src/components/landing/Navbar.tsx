@@ -20,11 +20,11 @@ const Navbar = () => {
       }`}
     >
       <div className="container max-w-6xl mx-auto px-6 flex items-center justify-between">
-      <a href="#" className="flex items-center gap-3 bg-white/60 backdrop-blur-sm px-3 py-1 rounded-lg">
+      <a href="#" className="flex items-center">
   <img
     src="/morobach-logo-horizontal.png"
     alt="Morobach"
-    className="h-14 md:h-16 w-auto object-contain"
+    className="h-20 md:h-24 w-auto object-contain"
   />
 </a>
 
