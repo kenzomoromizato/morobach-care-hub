@@ -2,7 +2,6 @@ import Navbar from "@/components/landing/Navbar";
 import HeroSection from "@/components/landing/HeroSection";
 import AboutSection from "@/components/landing/AboutSection";
 import CareModelSection from "@/components/landing/CareModelSection";
-import ForWhomSection from "@/components/landing/ForWhomSection";
 import DifferentialSection from "@/components/landing/DifferentialSection";
 import HowItWorksSection from "@/components/landing/HowItWorksSection";
 import ExperienceSection from "@/components/landing/ExperienceSection";
