@@ -20,10 +20,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container max-w-6xl mx-auto px-6 flex items-center justify-between">
-        <a
-  href="#"
-  className="flex items-center gap-3"
->
+      <a href="#" className="flex items-center gap-3">
   <img
     src="/morobach-logo.png"
     alt="Morobach"
