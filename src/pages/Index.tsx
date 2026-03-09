@@ -9,6 +9,7 @@ import ExperienceSection from "@/components/landing/ExperienceSection";
 import CTASection from "@/components/landing/CTASection";
 import Footer from "@/components/landing/Footer";
 import WhoIsItForSection from "@/components/landing/WhoIsItForSection";
+import FAQSection from "@/components/landing/FAQSection";
 
 const Index = () => {
   return (
@@ -21,6 +22,7 @@ const Index = () => {
       <HowItWorksSection />
       <ExperienceSection />
       <AboutSection />
+      <FAQSection />
       <CTASection />
       <Footer />
     </main>
