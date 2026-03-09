@@ -18,7 +18,6 @@ const Index = () => {
       <AboutSection />
       <CareModelSection />
       <WhoIsItForSection />
-      <ForWhomSection />
       <DifferentialSection />
       <HowItWorksSection />
       <ExperienceSection />
