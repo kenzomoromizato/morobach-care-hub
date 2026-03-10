@@ -28,22 +28,23 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="relative bg-[#F6F0E8] py-32 md:py-36">
+    <section className="relative bg-[#F6F0E8] py-36 md:py-40">
       {/* Separação visual do bloco anterior */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#D7C2A3]/70 to-transparent" />
       <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white/55 to-transparent" />
 
       <div className="mx-auto max-w-4xl px-6">
-        <div className="mb-16 md:mb-20 text-center">
-          <h2 className="mb-6 font-serif text-3xl text-brown-900 md:text-4xl">
+        <div className="mb-16 text-center md:mb-20">
+          <h2 className="font-serif text-3xl text-brown-900 md:text-4xl">
             Um acompanhamento médico contínuo,
             <br />
             com clareza e proximidade
           </h2>
 
+          {/* linha editorial */}
           <div className="mx-auto mt-6 h-[2px] w-16 bg-[#D7B273]/60"></div>
 
-          <p className="mx-auto max-w-2xl text-[1.02rem] leading-8 text-brown-600 md:text-[1.08rem]">
+          <p className="mx-auto mt-8 max-w-2xl text-[1.05rem] leading-8 text-brown-600 md:text-[1.1rem]">
             Se você busca um cuidado mais próximo, organizado e orientado para
             prevenção, a Morobach pode ser o início de uma nova forma de
             acompanhar a saúde da sua família.
@@ -82,7 +83,7 @@ export default function FAQSection() {
                       transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                       className="overflow-hidden"
                     >
-                      <p className="max-w-3xl pb-6 pr-10 text-[0.98rem] leading-7 text-brown-600 md:pb-7 md:text-[1rem]">
+                      <p className="max-w-3xl pb-6 pr-10 text-[0.99rem] leading-7 text-brown-600 md:pb-7 md:text-[1rem]">
                         {faq.answer}
                       </p>
                     </motion.div>
@@ -94,50 +95,50 @@ export default function FAQSection() {
         </div>
 
         {/* CTA */}
-        <div className="mt-14 md:mt-16 text-center">
+        <div className="mt-14 text-center md:mt-16">
           <a
             href="https://wa.me/5561986218705"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-none border border-[#D7B273] bg-[#D7B273] px-10 py-4 text-sm font-medium uppercase tracking-[0.2em] text-brown-950 transition-all duration-300 hover:-translate-y-[1px] hover:bg-[#e0bf8c]"
+            className="inline-flex items-center justify-center rounded-none border border-[#D7B273] bg-[#D7B273] px-10 py-4 text-sm font-medium uppercase tracking-[0.2em] text-brown-950 transition-all duration-300 ease-out hover:-translate-y-[1px] hover:bg-[#e0bf8c]"
           >
             Agendar conversa inicial
           </a>
         </div>
 
-        {/* Contato e redes sociais */}
+        {/* Contato e copyright */}
         <div className="mt-20 border-t border-[#DDCFBD] pt-10 text-center">
-          <div className="flex justify-center gap-8 text-brown-700">
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-brown-700">
             <a
               href="https://instagram.com/morobach"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 transition-opacity hover:opacity-70"
+              className="inline-flex items-center gap-2 text-sm transition-all duration-300 hover:-translate-y-[1px] hover:opacity-75"
             >
               <Instagram size={18} />
-              <span className="text-sm">Instagram</span>
+              <span>Instagram</span>
             </a>
 
             <a
               href="https://wa.me/5561986218705"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 transition-opacity hover:opacity-70"
+              className="inline-flex items-center gap-2 text-sm transition-all duration-300 hover:-translate-y-[1px] hover:opacity-75"
             >
               <Phone size={18} />
-              <span className="text-sm">WhatsApp</span>
+              <span>WhatsApp</span>
             </a>
 
             <a
               href="mailto:contato@morobach.com.br"
-              className="flex items-center gap-2 transition-opacity hover:opacity-70"
+              className="inline-flex items-center gap-2 text-sm transition-all duration-300 hover:-translate-y-[1px] hover:opacity-75"
             >
               <Mail size={18} />
-              <span className="text-sm">Email</span>
+              <span>Email</span>
             </a>
           </div>
 
-          <p className="mt-6 text-xs text-brown-500">
+          <p className="mt-6 text-xs tracking-[0.08em] text-brown-500">
             © {new Date().getFullYear()} Morobach. Todos os direitos reservados.
           </p>
         </div>
