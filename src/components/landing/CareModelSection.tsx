@@ -54,11 +54,7 @@ const itemVariants = {
 
 export default function CareModelSection() {
   return (
-    <section
-      id="modelo-de-cuidado"
-      className="relative bg-[#F8F3EC] py-36"
-    >
-      {/* separação visual do hero */}
+    <section id="modelo-de-cuidado" className="relative bg-[#F8F3EC] py-36">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#CDAE74]/60 to-transparent" />
       <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#EDE3D4]/70 to-transparent" />
 
@@ -77,8 +73,7 @@ export default function CareModelSection() {
             O modelo de cuidado Morobach
           </h2>
 
-          {/* linha editorial premium */}
-          <div className="mx-auto mt-6 h-[2px] w-16 bg-[#D7B273]/60"></div>
+          <div className="mx-auto mt-6 h-[2px] w-16 bg-[#D7B273]/60" />
 
           <p className="mx-auto mt-8 max-w-2xl text-[1.05rem] leading-8 text-brown-600 md:text-[1.1rem]">
             Acompanhamento médico domiciliar contínuo para famílias, baseado nos
@@ -91,13 +86,13 @@ export default function CareModelSection() {
             <motion.div
               key={step.number}
               variants={itemVariants}
-              className="relative"
+              className="flex h-full flex-col items-start"
             >
               <div className="mb-5 text-base font-medium tracking-[0.32em] text-[#B08A4E] md:text-lg">
                 {step.number}
               </div>
 
-              <h3 className="mb-3 font-serif text-[1.38rem] leading-tight text-brown-900">
+              <h3 className="mb-5 min-h-[4.8rem] font-serif text-[1.38rem] leading-[1.15] text-brown-900 md:min-h-[5.2rem]">
                 {step.title}
               </h3>
 
