@@ -29,7 +29,7 @@ export default function FAQSection() {
 
   return (
     <section className="relative bg-[#F6F0E8] py-32 md:py-36">
-      {/* Separação visual suave do bloco anterior */}
+      {/* Separação visual do bloco anterior */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#D7C2A3]/70 to-transparent" />
       <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white/55 to-transparent" />
 
@@ -48,15 +48,13 @@ export default function FAQSection() {
           </p>
         </div>
 
+        {/* FAQ */}
         <div className="border-t border-[#DDCFBD]">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
 
             return (
-              <div
-                key={faq.question}
-                className="border-b border-[#DDCFBD]"
-              >
+              <div key={faq.question} className="border-b border-[#DDCFBD]">
                 <button
                   type="button"
                   onClick={() => toggle(index)}
@@ -93,56 +91,53 @@ export default function FAQSection() {
           })}
         </div>
 
+        {/* CTA */}
         <div className="mt-14 md:mt-16 text-center">
           <a
             href="https://wa.me/5561986218705"
-            
-            {/* Contato e redes */}
-<div className="mt-20 border-t border-[#DDCFBD] pt-10 text-center">
-
-  <div className="flex justify-center gap-8 text-brown-700">
-
-    <a
-      href="https://instagram.com/morobach"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-2 transition-opacity hover:opacity-70"
-    >
-      <Instagram size={18} />
-      <span className="text-sm">Instagram</span>
-    </a>
-
-    <a
-      href="https://wa.me/5561986218705"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-2 transition-opacity hover:opacity-70"
-    >
-      <Phone size={18} />
-      <span className="text-sm">WhatsApp</span>
-    </a>
-
-    <a
-      href="mailto:contato@morobach.com.br"
-      className="flex items-center gap-2 transition-opacity hover:opacity-70"
-    >
-      <Mail size={18} />
-      <span className="text-sm">Email</span>
-    </a>
-
-  </div>
-
-  <p className="mt-6 text-xs text-brown-500">
-    © {new Date().getFullYear()} Morobach. Todos os direitos reservados.
-  </p>
-
-</div>
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-none border border-[#D7B273] bg-[#D7B273] px-10 py-4 text-sm font-medium uppercase tracking-[0.2em] text-brown-950 transition-all duration-300 hover:-translate-y-[1px] hover:bg-[#e0bf8c]"
           >
             Agendar conversa inicial
           </a>
+        </div>
+
+        {/* Contato e redes sociais */}
+        <div className="mt-20 border-t border-[#DDCFBD] pt-10 text-center">
+          <div className="flex justify-center gap-8 text-brown-700">
+            <a
+              href="https://instagram.com/morobach"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 transition-opacity hover:opacity-70"
+            >
+              <Instagram size={18} />
+              <span className="text-sm">Instagram</span>
+            </a>
+
+            <a
+              href="https://wa.me/5561986218705"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 transition-opacity hover:opacity-70"
+            >
+              <Phone size={18} />
+              <span className="text-sm">WhatsApp</span>
+            </a>
+
+            <a
+              href="mailto:contato@morobach.com.br"
+              className="flex items-center gap-2 transition-opacity hover:opacity-70"
+            >
+              <Mail size={18} />
+              <span className="text-sm">Email</span>
+            </a>
+          </div>
+
+          <p className="mt-6 text-xs text-brown-500">
+            © {new Date().getFullYear()} Morobach. Todos os direitos reservados.
+          </p>
         </div>
       </div>
     </section>
