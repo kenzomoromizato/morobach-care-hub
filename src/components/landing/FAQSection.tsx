@@ -11,7 +11,7 @@ const faqs = [
   {
     question: "A Morobach é home care?",
     answer:
-      "Não. A Morobach é um modelo de atenção primária domiciliar premium, baseado na medicina de família. O objetivo não é prestar assistência domiciliar de alta complexidade, internação em casa ou cuidados paliativos, mas oferecer acompanhamento médico longitudinal, mais próximo, organizado e centrado na saúde da família.",
+      "Não. A Morobach é um modelo de atenção primária domiciliar, baseado na medicina de família. O objetivo não é prestar assistência domiciliar de alta complexidade, internação em casa ou cuidados paliativos, mas oferecer acompanhamento médico longitudinal, mais próximo, organizado e centrado na saúde da família.",
   },
   {
     question: "Quem pode participar da assinatura?",
