@@ -59,9 +59,8 @@ const DoctorSection = () => {
               </p>
 
               <div className="mt-6 space-y-2 text-[15px] leading-relaxed text-foreground/72">
-                <p>CRM-DF [INSERIR CRM]</p>
-                <p>[Inserir formação principal]</p>
-                <p>[Inserir vínculo profissional, se desejar]</p>
+                <p>CRM-DF 35581</p>
+                <p>Formado pela Escola Superior de Ciências da Saúde (ESCS)</p>
               </div>
             </div>
 
