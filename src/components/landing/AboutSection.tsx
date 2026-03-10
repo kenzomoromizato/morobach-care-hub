@@ -32,23 +32,25 @@ export default function AboutSection() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="bg-[#F7F1E8] py-32 md:py-36">
+    <section className="bg-[#F7F1E8] py-36 md:py-40">
       <motion.div
         ref={ref}
         variants={containerVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
-        className="mx-auto grid max-w-6xl items-center gap-14 px-6 md:grid-cols-2 md:gap-20"
+        className="mx-auto grid max-w-5xl items-center gap-16 px-6 md:grid-cols-2 md:gap-20"
       >
+        {/* TEXTO */}
         <motion.div variants={itemVariants} className="order-2 md:order-1">
-          <div className="max-w-xl">
-            <h2 className="mb-8 font-serif text-3xl text-brown-900 md:text-4xl">
+          <div className="max-w-lg">
+            <h2 className="font-serif text-3xl text-brown-900 md:text-4xl">
               Cuidar também é acompanhar a vida
             </h2>
 
-            <div className="mx-auto mt-6 h-[2px] w-16 bg-[#D7B273]/60"></div>
+            {/* linha editorial */}
+            <div className="mt-6 h-[2px] w-16 bg-[#D7B273]/60"></div>
 
-            <div className="space-y-6 text-[1.03rem] leading-8 text-brown-700 md:text-[1.08rem]">
+            <div className="mt-10 space-y-6 text-[1.05rem] leading-8 text-brown-700 md:text-[1.1rem]">
               <p>
                 Quando a saúde é acompanhada com continuidade, o cuidado deixa
                 de ser apenas uma resposta aos momentos de doença e passa a
@@ -72,16 +74,15 @@ export default function AboutSection() {
           </div>
         </motion.div>
 
+        {/* IMAGEM */}
         <motion.div variants={itemVariants} className="order-1 md:order-2">
           <div className="overflow-hidden rounded-[28px]">
             <img
               src={emotionalImage}
               alt="Médico em atendimento domiciliar acolhedor com paciente em ambiente residencial"
-              className="h-[520px] w-full object-cover md:h-[620px]"
+              className="h-[540px] w-full object-cover md:h-[640px]"
             />
           </div>
-
-          <div className="mt-5 h-px w-24 bg-[#CDAE74]/70" />
         </motion.div>
       </motion.div>
     </section>
