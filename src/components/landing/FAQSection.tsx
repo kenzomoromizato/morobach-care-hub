@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Instagram, Mail, Phone } from "lucide-react";
 
 const faqs = [
   {
@@ -96,6 +96,47 @@ export default function FAQSection() {
         <div className="mt-14 md:mt-16 text-center">
           <a
             href="https://wa.me/5561986218705"
+            
+            {/* Contato e redes */}
+<div className="mt-20 border-t border-[#DDCFBD] pt-10 text-center">
+
+  <div className="flex justify-center gap-8 text-brown-700">
+
+    <a
+      href="https://instagram.com/morobach"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 transition-opacity hover:opacity-70"
+    >
+      <Instagram size={18} />
+      <span className="text-sm">Instagram</span>
+    </a>
+
+    <a
+      href="https://wa.me/5561986218705"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 transition-opacity hover:opacity-70"
+    >
+      <Phone size={18} />
+      <span className="text-sm">WhatsApp</span>
+    </a>
+
+    <a
+      href="mailto:contato@morobach.com.br"
+      className="flex items-center gap-2 transition-opacity hover:opacity-70"
+    >
+      <Mail size={18} />
+      <span className="text-sm">Email</span>
+    </a>
+
+  </div>
+
+  <p className="mt-6 text-xs text-brown-500">
+    © {new Date().getFullYear()} Morobach. Todos os direitos reservados.
+  </p>
+
+</div>
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-none border border-[#D7B273] bg-[#D7B273] px-10 py-4 text-sm font-medium uppercase tracking-[0.2em] text-brown-950 transition-all duration-300 hover:-translate-y-[1px] hover:bg-[#e0bf8c]"
