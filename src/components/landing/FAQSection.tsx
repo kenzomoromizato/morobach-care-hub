@@ -1,93 +1,58 @@
-import { motion } from "framer-motion";
-import { useState } from "react";
-import { ChevronDown } from "lucide-react";
-
 const faqs = [
   {
-    question: "O atendimento inclui toda a família?",
+    question: "A Morobach atende urgências?",
     answer:
-      "Sim. O acompanhamento inclui todos os membros da família que residem na mesma casa, com um único pagamento mensal para o cuidado de toda a família.",
+      "Não. A Morobach oferece acompanhamento médico domiciliar contínuo, com foco em prevenção, cuidado longitudinal e coordenação da saúde da família.",
   },
   {
-    question: "Quantas consultas estão incluídas no acompanhamento?",
+    question: "Quem pode participar da assinatura?",
     answer:
-      "O acompanhamento inclui uma visita domiciliar por mês para a família. Caso seja necessário, é possível solicitar visitas adicionais.",
+      "A assinatura inclui os membros da família que vivem na mesma casa, com acompanhamento organizado dentro da proposta do serviço.",
   },
   {
-    question: "Posso entrar em contato com o médico entre as consultas?",
+    question: "Como começar?",
     answer:
-      "Sim. Durante o período de acompanhamento a família tem acesso direto ao médico para dúvidas e orientações relacionadas à saúde.",
-  },
-  {
-    question: "O serviço substitui outros médicos especialistas?",
-    answer:
-      "Não. O médico de família atua na coordenação do cuidado. Quando necessário, orienta e acompanha encaminhamentos para especialistas.",
+      "O primeiro passo é uma conversa inicial para entender o perfil da família, esclarecer dúvidas e organizar a primeira etapa do acompanhamento.",
   },
 ];
 
 export default function FAQSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
-    <section className="py-24 md:py-32 bg-warm-beige">
-      <div className="container max-w-4xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-14"
-        >
-          <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-5">
-            Perguntas frequentes
+    <section className="py-24 bg-brown-900 text-white">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-3xl md:text-4xl font-serif mb-6">
+            Um acompanhamento médico contínuo, com clareza e proximidade
           </h2>
 
-          <div className="gold-line mb-8" />
-        </motion.div>
+          <p className="text-lg text-white/80 leading-relaxed">
+            Se você busca um cuidado mais próximo, organizado e orientado para
+            prevenção, a Morobach pode ser o início de uma nova forma de
+            acompanhar a saúde da sua família.
+          </p>
+        </div>
 
-        <div className="space-y-4">
-          {faqs.map((faq, i) => {
-            const isOpen = openIndex === i;
+        <div className="grid md:grid-cols-3 gap-8 mb-14">
+          {faqs.map((item, index) => (
+            <div
+              key={index}
+              className="border border-white/15 rounded-2xl p-6 bg-white/5"
+            >
+              <h3 className="font-serif text-xl mb-3">{item.question}</h3>
+              <p className="text-white/80 leading-relaxed">{item.answer}</p>
+            </div>
+          ))}
+        </div>
 
-            return (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="rounded-2xl border border-border bg-background/80 overflow-hidden"
-              >
-                <button
-                  type="button"
-                  onClick={() => toggleFAQ(i)}
-                  className="w-full flex items-center justify-between gap-4 text-left px-6 py-5"
-                >
-                  <h3 className="font-serif text-lg md:text-xl text-foreground">
-                    {faq.question}
-                  </h3>
-
-                  <ChevronDown
-                    className={`w-5 h-5 text-muted-foreground transition-transform duration-300 ${
-                      isOpen ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-
-                {isOpen && (
-                  <div className="px-6 pb-6">
-                    <p className="font-sans text-muted-foreground leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </div>
-                )}
-              </motion.div>
-            );
-          })}
+        <div className="text-center">
+          <a
+            href="https://wa.me/SEUNUMEROAQUI"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-full bg-white text-brown-900 px-8 py-4 text-sm font-medium transition hover:opacity-90"
+          >
+            Agendar conversa inicial
+          </a>
         </div>
       </div>
     </section>
