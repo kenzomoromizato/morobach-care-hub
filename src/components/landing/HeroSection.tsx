@@ -37,7 +37,13 @@ const HeroSection = () => {
       </motion.div>
 
       {/* Overlay principal visível */}
-      <div className="absolute inset-0 bg-brown-950/62" aria-hidden="true" />
+      <div className="absolute inset-0 bg-brown-950/72" aria-hidden="true" />
+
+      {/* Camada central para melhorar leitura do título */}
+      <div
+  className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(32,18,10,0.55)_0%,rgba(32,18,10,0.35)_35%,rgba(32,18,10,0.15)_60%,transparent_80%)]"
+  aria-hidden="true"
+      />
 
       {/* Tom quente da marca */}
       <div
