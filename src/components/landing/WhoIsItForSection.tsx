@@ -65,6 +65,8 @@ export default function WhoIsItForSection() {
             Para quem esse cuidado faz sentido
           </h2>
 
+          <div className="mx-auto mt-6 h-[2px] w-16 bg-[#D7B273]/60"></div>
+
           <p className="mx-auto max-w-2xl text-[1.02rem] leading-8 text-brown-600 md:text-[1.08rem]">
             A Morobach foi pensada para famílias e indivíduos que desejam um
             acompanhamento médico próximo, contínuo e orientado para prevenção.
