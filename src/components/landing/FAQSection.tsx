@@ -41,6 +41,8 @@ export default function FAQSection() {
             com clareza e proximidade
           </h2>
 
+          <div className="mx-auto mt-6 h-[2px] w-16 bg-[#D7B273]/60"></div>
+
           <p className="mx-auto max-w-2xl text-[1.02rem] leading-8 text-brown-600 md:text-[1.08rem]">
             Se você busca um cuidado mais próximo, organizado e orientado para
             prevenção, a Morobach pode ser o início de uma nova forma de
