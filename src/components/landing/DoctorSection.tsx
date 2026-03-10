@@ -86,47 +86,6 @@ const DoctorSection = () => {
               </p>
             </div>
 
-            <div className="mt-10 grid gap-6 border-t border-primary/20 pt-8 sm:grid-cols-3">
-              <div>
-                <p className="text-[11px] uppercase tracking-[0.22em] text-foreground/50">
-                  Princípio
-                </p>
-                <p className="mt-2 font-serif text-xl text-foreground">
-                  Conhecer antes de tratar
-                </p>
-                <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
-                  Entender o contexto da pessoa e da família antes de tomar
-                  decisões clínicas.
-                </p>
-              </div>
-
-              <div>
-                <p className="text-[11px] uppercase tracking-[0.22em] text-foreground/50">
-                  Princípio
-                </p>
-                <p className="mt-2 font-serif text-xl text-foreground">
-                  Acompanhar ao longo do tempo
-                </p>
-                <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
-                  A saúde não acontece em episódios isolados, mas ao longo da
-                  vida.
-                </p>
-              </div>
-
-              <div>
-                <p className="text-[11px] uppercase tracking-[0.22em] text-foreground/50">
-                  Princípio
-                </p>
-                <p className="mt-2 font-serif text-xl text-foreground">
-                  Organizar o cuidado
-                </p>
-                <p className="mt-2 text-sm text-foreground/70 leading-relaxed">
-                  Ajudar a família a navegar exames, especialistas e decisões
-                  médicas com mais clareza.
-                </p>
-              </div>
-            </div>
-
             <div className="mt-10 border-l border-primary/30 pl-6">
               <p className="font-serif text-xl italic leading-relaxed text-foreground md:text-2xl">
                 Boa medicina depende de conhecer as pessoas ao longo do tempo.
