@@ -77,7 +77,8 @@ export default function CareModelSection() {
           <h2 className="mb-5 font-serif text-3xl text-brown-900 md:text-4xl">
             O modelo de cuidado Morobach
           </h2>
-
+          <div className="mx-auto mt-6 h-[2px] w-16 bg-[#D7B273]/60"></div>
+          
           <p className="mx-auto max-w-2xl text-[1.08rem] leading-8 text-brown-700 md:text-[1.14rem]">
             Acompanhamento médico domiciliar contínuo para famílias, baseado nos
             princípios da medicina de família e da atenção primária à saúde.
