@@ -56,14 +56,14 @@ export default function CareModelSection() {
   return (
     <section
       id="modelo-de-cuidado"
-      className="relative bg-[#F8F3EC] py-28"
+      className="relative bg-[#F8F3EC] py-36"
     >
-      {/* separação visual em relação ao hero */}
+      {/* separação visual do hero */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#CDAE74]/60 to-transparent" />
       <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#EDE3D4]/70 to-transparent" />
 
       <motion.div
-        className="mx-auto max-w-6xl px-6"
+        className="mx-auto max-w-5xl px-6"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
@@ -71,15 +71,16 @@ export default function CareModelSection() {
       >
         <motion.div
           variants={itemVariants}
-          className="mx-auto mb-16 max-w-3xl text-center"
+          className="mx-auto mb-28 max-w-3xl text-center"
         >
-        
-          <h2 className="mb-5 font-serif text-3xl text-brown-900 md:text-4xl">
+          <h2 className="font-serif text-3xl text-brown-900 md:text-4xl">
             O modelo de cuidado Morobach
           </h2>
+
+          {/* linha editorial premium */}
           <div className="mx-auto mt-6 h-[2px] w-16 bg-[#D7B273]/60"></div>
-          
-          <p className="mx-auto max-w-2xl text-[1.08rem] leading-8 text-brown-700 md:text-[1.14rem]">
+
+          <p className="mx-auto mt-8 max-w-2xl text-[1.05rem] leading-8 text-brown-600 md:text-[1.1rem]">
             Acompanhamento médico domiciliar contínuo para famílias, baseado nos
             princípios da medicina de família e da atenção primária à saúde.
           </p>
@@ -100,7 +101,7 @@ export default function CareModelSection() {
                 {step.title}
               </h3>
 
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="max-w-[24ch] text-[0.97rem] leading-7 text-brown-600">
                 {step.description}
               </p>
             </motion.div>
