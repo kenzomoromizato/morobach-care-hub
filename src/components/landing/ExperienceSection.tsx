@@ -72,6 +72,8 @@ export default function ExperienceSection() {
               Um cuidado diferente do atendimento episódico
             </h2>
 
+            <div className="mx-auto mt-6 h-[2px] w-16 bg-[#D7B273]/60"></div>
+
             <p className="mb-12 text-[1.05rem] leading-8 text-brown-600 md:text-[1.1rem]">
               A Morobach foi construída para oferecer um acompanhamento mais
               profundo, contínuo e criterioso, centrado na saúde da família ao
