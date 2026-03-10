@@ -46,6 +46,8 @@ export default function AboutSection() {
               Cuidar também é acompanhar a vida
             </h2>
 
+            <div className="mx-auto mt-6 h-[2px] w-16 bg-[#D7B273]/60"></div>
+
             <div className="space-y-6 text-[1.03rem] leading-8 text-brown-700 md:text-[1.08rem]">
               <p>
                 Quando a saúde é acompanhada com continuidade, o cuidado deixa
