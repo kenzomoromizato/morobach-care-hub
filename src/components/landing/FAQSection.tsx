@@ -1,5 +1,6 @@
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
@@ -10,73 +11,88 @@ const faqs = [
   {
     question: "Quem pode participar da assinatura?",
     answer:
-      "A assinatura inclui os membros da família que vivem na mesma casa, com acompanhamento organizado dentro da proposta do serviço.",
+      "A assinatura inclui os membros da família que vivem na mesma casa, permitindo um acompanhamento integrado e organizado para todos.",
   },
   {
     question: "Como começar?",
     answer:
-      "O primeiro passo é uma conversa inicial para entender o perfil da família, esclarecer dúvidas e organizar a primeira etapa do acompanhamento.",
+      "O primeiro passo é uma conversa inicial para compreender o perfil da família, esclarecer dúvidas e organizar o início do acompanhamento.",
   },
 ];
 
 export default function FAQSection() {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggle = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
   return (
-    <section className="py-32 md:py-40 bg-foreground">
-      <div ref={ref} className="max-w-5xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="text-center max-w-3xl mx-auto mb-20"
-        >
-          <h2 className="text-3xl md:text-4xl font-serif text-primary-foreground mb-6 leading-snug">
-            Um acompanhamento médico contínuo, com clareza e proximidade
+    <section className="bg-[#3A2316] py-36 text-white">
+      <div className="mx-auto max-w-4xl px-6">
+        <div className="mb-16 text-center">
+          <h2 className="mb-6 font-serif text-3xl md:text-4xl">
+            Um acompanhamento médico contínuo,
+            <br />
+            com clareza e proximidade
           </h2>
-          <div className="h-px w-24 mx-auto mb-8" style={{ background: "linear-gradient(90deg, transparent, hsl(var(--soft-gold) / 0.5), transparent)" }} />
-          <p className="text-lg text-primary-foreground/65 leading-relaxed">
+
+          <p className="mx-auto max-w-2xl text-[1.05rem] leading-8 text-white/80">
             Se você busca um cuidado mais próximo, organizado e orientado para
             prevenção, a Morobach pode ser o início de uma nova forma de
             acompanhar a saúde da sua família.
           </p>
-        </motion.div>
-
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
-          {faqs.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 24 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.7, delay: 0.1 * index, ease: "easeOut" }}
-              className="border border-primary-foreground/10 rounded-sm p-8 bg-primary-foreground/[0.03]"
-            >
-              <h3 className="font-serif text-xl text-primary-foreground mb-4">
-                {item.question}
-              </h3>
-              <p className="text-primary-foreground/60 leading-relaxed">
-                {item.answer}
-              </p>
-            </motion.div>
-          ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
-          className="text-center"
-        >
+        <div className="space-y-5">
+          {faqs.map((faq, index) => {
+            const isOpen = openIndex === index;
+
+            return (
+              <div
+                key={faq.question}
+                className="border-b border-white/20 pb-5"
+              >
+                <button
+                  onClick={() => toggle(index)}
+                  className="flex w-full items-center justify-between text-left"
+                >
+                  <span className="font-serif text-lg">
+                    {faq.question}
+                  </span>
+
+                  <ChevronDown
+                    className={`h-5 w-5 transition-transform duration-300 ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                {isOpen && (
+                  <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.35 }}
+                    className="mt-4 max-w-2xl text-[0.98rem] leading-7 text-white/80"
+                  >
+                    {faq.answer}
+                  </motion.p>
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="mt-16 text-center">
           <a
-            href="https://wa.me/SEUNUMEROAQUI"
+            href="https://wa.me/5561986218705"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-primary text-primary-foreground px-10 py-4 text-sm tracking-[0.15em] uppercase font-sans hover:bg-soft-gold/90 transition-all duration-300"
+            className="inline-flex items-center justify-center rounded-none border border-[#D7B273] bg-[#D7B273] px-10 py-4 text-sm font-medium uppercase tracking-[0.2em] text-brown-950 transition-all duration-300 hover:-translate-y-[1px] hover:bg-[#e0bf8c]"
           >
             Agendar conversa inicial
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
