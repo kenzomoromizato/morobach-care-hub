@@ -4,19 +4,39 @@ import { ChevronDown, Instagram, Mail, Phone } from "lucide-react";
 
 const faqs = [
   {
-    question: "A Morobach atende urgências?",
+    question: "A Morobach atende urgências ou funciona como pronto atendimento?",
     answer:
-      "Não. A Morobach oferece acompanhamento médico domiciliar contínuo, com foco em prevenção, cuidado longitudinal e coordenação da saúde da família.",
+      "Não. A Morobach não é um serviço de urgência nem pronto atendimento. O acompanhamento é contínuo e planejado, com foco em prevenção, promoção de saúde, seguimento clínico e coordenação do cuidado da família ao longo do tempo.",
+  },
+  {
+    question: "A Morobach é home care?",
+    answer:
+      "Não. A Morobach é um modelo de atenção primária domiciliar premium, baseado na medicina de família. O objetivo não é prestar assistência domiciliar de alta complexidade, internação em casa ou cuidados paliativos, mas oferecer acompanhamento médico longitudinal, mais próximo, organizado e centrado na saúde da família.",
   },
   {
     question: "Quem pode participar da assinatura?",
     answer:
-      "A assinatura inclui os membros da família que vivem na mesma casa, permitindo um acompanhamento integrado e organizado para todos.",
+      "A assinatura inclui os membros da família que vivem na mesma casa. A proposta é permitir um acompanhamento integrado, com mais contexto sobre a rotina, os antecedentes e as necessidades de saúde de cada pessoa do núcleo familiar.",
+  },
+  {
+    question: "Como funciona o acompanhamento da Morobach?",
+    answer:
+      "O cuidado começa com uma conversa inicial, seguida pela organização do acompanhamento da família. A proposta inclui consulta domiciliar periódica, avaliação individualizada, acompanhamento ao longo do tempo e apoio na coordenação do cuidado sempre que necessário.",
+  },
+  {
+    question: "Posso continuar com meus especialistas e meu plano de saúde?",
+    answer:
+      "Sim. A Morobach não substitui necessariamente outros profissionais que já acompanham você. O papel do médico de família também é integrar informações, ajudar na tomada de decisões e coordenar o cuidado de forma mais clara e contínua.",
+  },
+  {
+    question: "É possível solicitar visitas adicionais?",
+    answer:
+      "Sim. Além da consulta domiciliar prevista no acompanhamento, podem ser organizadas visitas adicionais conforme a necessidade clínica e a disponibilidade do serviço.",
   },
   {
     question: "Como começar?",
     answer:
-      "O primeiro passo é uma conversa inicial para compreender o perfil da família, esclarecer dúvidas e organizar o início do acompanhamento.",
+      "O primeiro passo é agendar uma conversa inicial. Nela, a Morobach compreende o perfil da família, esclarece dúvidas sobre o modelo de cuidado e orienta o início do acompanhamento.",
   },
 ];
 
