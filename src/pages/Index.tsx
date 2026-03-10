@@ -4,7 +4,6 @@ import WhoIsItForSection from "@/components/landing/WhoIsItForSection";
 import AboutSection from "@/components/landing/AboutSection";
 import ExperienceSection from "@/components/landing/ExperienceSection";
 import FAQSection from "@/components/landing/FAQSection";
-import CTASection from "@/components/landing/CTASection";
 
 const Index = () => {
   return (
@@ -15,7 +14,6 @@ const Index = () => {
       <AboutSection />
       <ExperienceSection />
       <FAQSection />
-      <CTASection />
     </main>
   );
 };
