@@ -99,7 +99,7 @@ export default function CareModelSection() {
                 {step.title}
               </h3>
 
-              <p className="max-w-[24ch] text-[1.05rem] leading-8 text-brown-700">
+              <p className="max-w-[24ch] text-[0.97rem] leading-7 text-brown-600">
                 {step.description}
               </p>
             </motion.div>
