@@ -45,7 +45,7 @@ const itemVariants = {
 
 export default function WhoIsItForSection() {
   return (
-    <section className="relative bg-white py-28">
+    <section className="relative bg-white py-36">
       {/* Separação visual em relação ao bloco anterior */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#D8C2A0]/70 to-transparent" />
       <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#F6EFE6]/65 to-transparent" />
@@ -59,9 +59,9 @@ export default function WhoIsItForSection() {
       >
         <motion.div
           variants={itemVariants}
-          className="mx-auto mb-18 max-w-3xl text-center"
+          className="mx-auto mb-28 max-w-3xl text-center"
         >
-          <h2 className="mb-5 font-serif text-3xl text-brown-900 md:text-4xl">
+          <h2 className="mb-7 font-serif text-3xl text-brown-900 md:text-4xl">
             Para quem esse cuidado faz sentido
           </h2>
 
