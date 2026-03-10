@@ -1,5 +1,4 @@
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const profiles = [
   {
@@ -19,49 +18,81 @@ const profiles = [
   },
 ];
 
-export default function WhoIsItForSection() {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
+const sectionVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.75,
+      ease: [0.22, 1, 0.36, 1],
+      staggerChildren: 0.1,
+    },
+  },
+};
 
+const itemVariants = {
+  hidden: { opacity: 0, y: 18 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.65,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
+export default function WhoIsItForSection() {
   return (
-    <section className="py-32 md:py-40 bg-card">
-      <div ref={ref} className="max-w-5xl mx-auto px-6">
+    <section className="relative bg-white py-28">
+      {/* Separação visual em relação ao bloco anterior */}
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#D8C2A0]/70 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#F6EFE6]/65 to-transparent" />
+
+      <motion.div
+        className="mx-auto max-w-6xl px-6"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="text-center mb-20"
+          variants={itemVariants}
+          className="mx-auto mb-18 max-w-3xl text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-5">
+          <h2 className="mb-5 font-serif text-3xl text-brown-900 md:text-4xl">
             Para quem esse cuidado faz sentido
           </h2>
-          <div className="gold-line mb-8" />
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            A Morobach foi pensada para famílias que desejam um acompanhamento
-            médico próximo, contínuo e orientado para prevenção.
+
+          <p className="mx-auto max-w-2xl text-[1.02rem] leading-8 text-brown-600 md:text-[1.08rem]">
+            A Morobach foi pensada para famílias e indivíduos que desejam um
+            acompanhamento médico próximo, contínuo e orientado para prevenção.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-14">
+        <div className="grid gap-y-14 md:grid-cols-3 md:gap-x-12 lg:gap-x-16">
           {profiles.map((profile, index) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 24 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.7, delay: 0.1 * index, ease: "easeOut" }}
-              className="text-center"
+              key={profile.title}
+              variants={itemVariants}
+              className="relative px-2 text-center md:px-6"
             >
-              <h3 className="font-serif text-xl text-foreground mb-4">
+              {index !== 0 && (
+                <div className="absolute left-0 top-1/2 hidden h-24 -translate-y-1/2 border-l border-[#E9DED0] md:block" />
+              )}
+
+              <h3 className="mx-auto mb-4 max-w-[16ch] font-serif text-[1.45rem] leading-tight text-brown-900">
                 {profile.title}
               </h3>
 
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="mx-auto max-w-[28ch] text-[0.98rem] leading-7 text-brown-600">
                 {profile.description}
               </p>
             </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
