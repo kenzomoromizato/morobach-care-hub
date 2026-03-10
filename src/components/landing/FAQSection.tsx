@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 const faqs = [
@@ -21,69 +21,79 @@ const faqs = [
 ];
 
 export default function FAQSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section className="bg-[#3A2316] py-36 text-white">
+    <section className="relative bg-[#F6F0E8] py-32 md:py-36">
+      {/* Separação visual suave do bloco anterior */}
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#D7C2A3]/70 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white/55 to-transparent" />
+
       <div className="mx-auto max-w-4xl px-6">
-        <div className="mb-16 text-center">
-          <h2 className="mb-6 font-serif text-3xl md:text-4xl">
+        <div className="mb-16 md:mb-20 text-center">
+          <h2 className="mb-6 font-serif text-3xl text-brown-900 md:text-4xl">
             Um acompanhamento médico contínuo,
             <br />
             com clareza e proximidade
           </h2>
 
-          <p className="mx-auto max-w-2xl text-[1.05rem] leading-8 text-white/80">
+          <p className="mx-auto max-w-2xl text-[1.02rem] leading-8 text-brown-600 md:text-[1.08rem]">
             Se você busca um cuidado mais próximo, organizado e orientado para
             prevenção, a Morobach pode ser o início de uma nova forma de
             acompanhar a saúde da sua família.
           </p>
         </div>
 
-        <div className="space-y-5">
+        <div className="border-t border-[#DDCFBD]">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
 
             return (
               <div
                 key={faq.question}
-                className="border-b border-white/20 pb-5"
+                className="border-b border-[#DDCFBD]"
               >
                 <button
+                  type="button"
                   onClick={() => toggle(index)}
-                  className="flex w-full items-center justify-between text-left"
+                  className="flex w-full items-center justify-between gap-6 py-6 text-left md:py-7"
                 >
-                  <span className="font-serif text-lg">
+                  <span className="font-serif text-[1.18rem] leading-snug text-brown-900 md:text-[1.28rem]">
                     {faq.question}
                   </span>
 
                   <ChevronDown
-                    className={`h-5 w-5 transition-transform duration-300 ${
+                    className={`h-5 w-5 shrink-0 text-[#B08A4E] transition-transform duration-300 ${
                       isOpen ? "rotate-180" : ""
                     }`}
                   />
                 </button>
 
-                {isOpen && (
-                  <motion.p
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.35 }}
-                    className="mt-4 max-w-2xl text-[0.98rem] leading-7 text-white/80"
-                  >
-                    {faq.answer}
-                  </motion.p>
-                )}
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                      className="overflow-hidden"
+                    >
+                      <p className="max-w-3xl pb-6 pr-10 text-[0.98rem] leading-7 text-brown-600 md:pb-7 md:text-[1rem]">
+                        {faq.answer}
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             );
           })}
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-14 md:mt-16 text-center">
           <a
             href="https://wa.me/5561986218705"
             target="_blank"
