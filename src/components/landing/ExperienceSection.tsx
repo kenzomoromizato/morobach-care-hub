@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import institutionalImage from "@/assets/institutional-care.png";
+import institutionalImage from "@/assets/institutional-care.jpg";
 
 const differentials = [
   {
@@ -46,49 +46,49 @@ const itemVariants = {
 
 export default function ExperienceSection() {
   return (
-    <section className="bg-white py-36">
+    <section className="bg-white py-36 md:py-40">
       <motion.div
-        className="mx-auto grid max-w-6xl items-center gap-16 px-6 md:grid-cols-2 md:gap-20"
+        className="mx-auto grid max-w-5xl items-center gap-16 px-6 md:grid-cols-2 md:gap-20"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.25 }}
       >
-        {/* Imagem institucional */}
+        {/* Imagem */}
         <motion.div variants={itemVariants}>
           <div className="overflow-hidden rounded-[28px]">
             <img
               src={institutionalImage}
               alt="Médico de família em conversa tranquila com paciente em ambiente domiciliar"
-              className="h-[520px] w-full object-cover md:h-[620px]"
+              className="h-[540px] w-full object-cover md:h-[640px]"
             />
           </div>
         </motion.div>
 
         {/* Conteúdo */}
         <motion.div variants={itemVariants}>
-          <div className="max-w-xl">
-            <h2 className="mb-6 font-serif text-3xl text-brown-900 md:text-4xl">
+          <div className="max-w-lg">
+            <h2 className="font-serif text-3xl text-brown-900 md:text-4xl">
               Um cuidado diferente do atendimento episódico
             </h2>
 
-            <div className="mx-auto mt-6 h-[2px] w-16 bg-[#D7B273]/60"></div>
+            {/* linha editorial */}
+            <div className="mt-6 h-[2px] w-16 bg-[#D7B273]/60"></div>
 
-            <p className="mb-12 text-[1.05rem] leading-8 text-brown-600 md:text-[1.1rem]">
+            <p className="mt-8 mb-12 text-[1.05rem] leading-8 text-brown-600 md:text-[1.1rem]">
               A Morobach foi construída para oferecer um acompanhamento mais
               profundo, contínuo e criterioso, centrado na saúde da família ao
               longo do tempo.
             </p>
 
-            {/* Cards */}
             <div className="space-y-6">
               {differentials.map((item) => (
                 <motion.div
                   key={item.title}
                   variants={itemVariants}
-                  className="rounded-2xl border border-brown-200/50 bg-[#F9F5EF] p-8 transition-all duration-300 hover:-translate-y-[2px] hover:shadow-md"
+                  className="rounded-[22px] border border-brown-200/50 bg-[#FBF7F1] p-8 transition-all duration-300 ease-out hover:-translate-y-[1px] hover:shadow-md"
                 >
-                  <h3 className="mb-2 font-serif text-xl text-brown-900">
+                  <h3 className="mb-3 font-serif text-[1.32rem] leading-tight text-brown-900">
                     {item.title}
                   </h3>
 
