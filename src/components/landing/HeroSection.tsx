@@ -17,44 +17,43 @@ const fadeUp = {
 const HeroSection = () => {
   const { scrollY } = useScroll();
 
-  // Parallax mais perceptível
-  const imageY = useTransform(scrollY, [0, 800], [0, -90]);
-  const contentY = useTransform(scrollY, [0, 800], [0, -24]);
+  // Parallax visível
+  const backgroundY = useTransform(scrollY, [0, 1000], [0, 160]);
+  const contentY = useTransform(scrollY, [0, 1000], [0, -30]);
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-brown-950">
-      {/* Imagem com parallax */}
+    <section className="relative h-screen min-h-[760px] overflow-hidden bg-brown-950">
+      {/* Camada da imagem com parallax perceptível */}
       <motion.div
-        style={{ y: imageY, scale: 1.08 }}
-        className="absolute inset-0"
+        style={{ y: backgroundY }}
+        className="absolute inset-0 scale-[1.18]"
         aria-hidden="true"
       >
         <img
           src={heroImage}
           alt="Médico de família em atendimento domiciliar com uma família em ambiente elegante"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover object-center"
         />
       </motion.div>
 
-      {/* Overlay principal mais visível */}
-      <div className="absolute inset-0 bg-brown-950/60" aria-hidden="true" />
+      {/* Overlay principal visível */}
+      <div className="absolute inset-0 bg-brown-950/62" aria-hidden="true" />
 
-      {/* Camada quente para preservar a identidade visual */}
+      {/* Tom quente da marca */}
       <div
-        className="absolute inset-0 bg-gradient-to-br from-brown-900/35 via-transparent to-brown-950/35"
+        className="absolute inset-0 bg-[linear-gradient(180deg,rgba(53,29,16,0.24)_0%,rgba(53,29,16,0.18)_35%,rgba(32,18,10,0.42)_100%)]"
         aria-hidden="true"
       />
 
-      {/* Vinheta suave para dar profundidade */}
+      {/* Vinheta para profundidade */}
       <div
-        className="absolute inset-0 shadow-[inset_0_0_180px_rgba(40,20,10,0.35)]"
+        className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_35%,rgba(24,13,7,0.28)_100%)]"
         aria-hidden="true"
       />
 
-      {/* Conteúdo */}
       <motion.div
         style={{ y: contentY }}
-        className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center justify-center px-6 py-28"
+        className="relative z-10 mx-auto flex h-full max-w-7xl items-center justify-center px-6 py-28"
       >
         <div className="text-center text-white">
           <motion.p
@@ -82,7 +81,7 @@ const HeroSection = () => {
             initial="hidden"
             animate="visible"
             custom={0.28}
-            className="mx-auto mt-8 max-w-3xl text-lg leading-relaxed text-white/82 md:text-[1.35rem]"
+            className="mx-auto mt-8 max-w-3xl text-lg leading-relaxed text-white/85 md:text-[1.35rem]"
           >
             A Morobach oferece acompanhamento médico domiciliar contínuo para
             toda a família, com prevenção, promoção de saúde e coordenação do
