@@ -1,68 +1,54 @@
-import { motion } from "framer-motion";
-
-const items = [
+const profiles = [
   {
-    title: "Pessoas saudáveis que querem prevenir doença cardiovascular",
-    desc: "Avaliação de risco cardiovascular, organização de exames e estratégias baseadas em evidência para reduzir risco ao longo do tempo.",
+    title: "Adultos que valorizam prevenção",
+    description:
+      "Adultos saudáveis que desejam acompanhar sua saúde de forma organizada, com orientação médica contínua e foco em prevenção ao longo da vida.",
   },
   {
-    title: "Pessoas com histórico familiar de doença cardíaca",
-    desc: "Planejamento preventivo mais cuidadoso para quem tem maior predisposição genética.",
+    title: "Pessoas com condições crônicas",
+    description:
+      "Pessoas com condições como hipertensão, diabetes ou colesterol elevado que se beneficiam de acompanhamento médico próximo e contínuo.",
   },
   {
-    title: "Pacientes com múltiplos exames e orientações desencontradas",
-    desc: "Organização das informações médicas em um plano claro e coerente.",
-  },
-  {
-    title: "Quem valoriza tempo e profundidade na consulta médica",
-    desc: "Consulta domiciliar com atenção, sem pressa e focada em prevenção de longo prazo.",
+    title: "Famílias multigeracionais",
+    description:
+      "Famílias com diferentes gerações vivendo na mesma casa e que preferem um cuidado médico integrado para todos os membros.",
   },
 ];
 
 export default function WhoIsItForSection() {
   return (
-    <section className="py-24 md:py-32 bg-background">
-      <div className="container max-w-6xl mx-auto px-6">
+    <section className="py-24 bg-white">
+      <div className="max-w-6xl mx-auto px-6">
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-14"
-        >
-          <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-5">
-            Para quem é o cuidado Morobach
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-serif text-brown-900 mb-4">
+            Para quem esse cuidado faz sentido
           </h2>
 
-          <div className="gold-line mb-8" />
-
-          <p className="font-sans text-muted-foreground text-lg max-w-2xl mx-auto">
-            Um modelo de cuidado pensado para prevenção real e acompanhamento contínuo.
+          <p className="text-lg text-brown-700 max-w-2xl mx-auto">
+            A Morobach foi pensada para famílias que desejam um acompanhamento
+            médico próximo, contínuo e orientado para prevenção.
           </p>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          {items.map((item, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="p-8 rounded-2xl border border-border bg-background shadow-sm"
-            >
-              <h3 className="font-serif text-xl text-foreground mb-3">
-                {item.title}
-              </h3>
-
-              <p className="font-sans text-muted-foreground leading-relaxed">
-                {item.desc}
-              </p>
-            </motion.div>
-          ))}
         </div>
 
+        <div className="grid md:grid-cols-3 gap-10">
+
+          {profiles.map((profile, index) => (
+            <div key={index} className="text-center">
+
+              <h3 className="font-serif text-xl text-brown-900 mb-3">
+                {profile.title}
+              </h3>
+
+              <p className="text-brown-700 leading-relaxed">
+                {profile.description}
+              </p>
+
+            </div>
+          ))}
+
+        </div>
       </div>
     </section>
   );
