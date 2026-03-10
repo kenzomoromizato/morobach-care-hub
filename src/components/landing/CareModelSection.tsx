@@ -73,10 +73,7 @@ export default function CareModelSection() {
           variants={itemVariants}
           className="mx-auto mb-16 max-w-3xl text-center"
         >
-          <p className="mb-4 text-xs font-medium uppercase tracking-[0.35em] text-[#B08A4E]">
-            Modelo de cuidado
-          </p>
-
+        
           <h2 className="mb-5 font-serif text-3xl text-brown-900 md:text-4xl">
             O modelo de cuidado Morobach
           </h2>
@@ -87,7 +84,7 @@ export default function CareModelSection() {
           </p>
         </motion.div>
 
-        <div className="grid gap-y-12 md:grid-cols-2 md:gap-x-14 lg:grid-cols-4 lg:gap-x-10">
+        <div className="grid gap-y-16 md:grid-cols-2 md:gap-x-20 lg:grid-cols-4 lg:gap-x-24">
           {steps.map((step) => (
             <motion.div
               key={step.number}
@@ -102,7 +99,7 @@ export default function CareModelSection() {
                 {step.title}
               </h3>
 
-              <p className="max-w-[28ch] text-[1.02rem] leading-8 text-brown-700">
+              <p className="max-w-[24ch] text-[1.05rem] leading-8 text-brown-700">
                 {step.description}
               </p>
             </motion.div>
