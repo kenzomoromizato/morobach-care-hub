@@ -1,3 +1,6 @@
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
 const steps = [
   {
     title: "Conversa inicial",
@@ -22,41 +25,50 @@ const steps = [
 ];
 
 export default function CareModelSection() {
-  return (
-    <section className="py-24 bg-beige-50">
-      <div className="max-w-6xl mx-auto px-6">
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
 
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif text-brown-900 mb-4">
+  return (
+    <section className="py-32 md:py-40 bg-background">
+      <div ref={ref} className="max-w-5xl mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="text-center mb-20"
+        >
+          <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-5">
             O modelo de cuidado Morobach
           </h2>
-
-          <p className="text-lg text-brown-700 max-w-2xl mx-auto">
+          <div className="gold-line mb-8" />
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Acompanhamento médico domiciliar contínuo para famílias, baseado nos
             princípios da medicina de família e da atenção primária à saúde.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-4 gap-10">
-
+        <div className="grid md:grid-cols-4 gap-12">
           {steps.map((step, index) => (
-            <div key={index} className="text-center">
-
-              <div className="text-gold-600 text-xl font-semibold mb-3">
-                {index + 1}
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 24 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.7, delay: 0.1 * index, ease: "easeOut" }}
+              className="text-center"
+            >
+              <div className="text-primary/70 text-sm font-sans tracking-widest uppercase mb-4">
+                {String(index + 1).padStart(2, "0")}
               </div>
 
-              <h3 className="font-serif text-xl text-brown-900 mb-2">
+              <h3 className="font-serif text-xl text-foreground mb-3">
                 {step.title}
               </h3>
 
-              <p className="text-brown-700 text-sm leading-relaxed">
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 {step.description}
               </p>
-
-            </div>
+            </motion.div>
           ))}
-
         </div>
       </div>
     </section>

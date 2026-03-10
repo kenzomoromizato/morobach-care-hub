@@ -1,3 +1,6 @@
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
 const profiles = [
   {
     title: "Adultos que valorizam prevenção",
@@ -17,37 +20,46 @@ const profiles = [
 ];
 
 export default function WhoIsItForSection() {
-  return (
-    <section className="py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
 
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif text-brown-900 mb-4">
+  return (
+    <section className="py-32 md:py-40 bg-card">
+      <div ref={ref} className="max-w-5xl mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="text-center mb-20"
+        >
+          <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-5">
             Para quem esse cuidado faz sentido
           </h2>
-
-          <p className="text-lg text-brown-700 max-w-2xl mx-auto">
+          <div className="gold-line mb-8" />
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             A Morobach foi pensada para famílias que desejam um acompanhamento
             médico próximo, contínuo e orientado para prevenção.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-10">
-
+        <div className="grid md:grid-cols-3 gap-14">
           {profiles.map((profile, index) => (
-            <div key={index} className="text-center">
-
-              <h3 className="font-serif text-xl text-brown-900 mb-3">
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 24 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.7, delay: 0.1 * index, ease: "easeOut" }}
+              className="text-center"
+            >
+              <h3 className="font-serif text-xl text-foreground mb-4">
                 {profile.title}
               </h3>
 
-              <p className="text-brown-700 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 {profile.description}
               </p>
-
-            </div>
+            </motion.div>
           ))}
-
         </div>
       </div>
     </section>
