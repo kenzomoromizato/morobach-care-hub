@@ -2,57 +2,86 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import emotionalImage from "@/assets/emotional-section.jpg";
 
+const containerVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.75,
+      ease: [0.22, 1, 0.36, 1],
+      staggerChildren: 0.12,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 18 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
 export default function AboutSection() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="py-32 md:py-40 bg-background">
-      <div ref={ref} className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="w-full"
-        >
-          <img
-            src={emotionalImage}
-            alt="Médico conversando com paciente em ambiente domiciliar"
-            className="rounded-sm shadow-lg w-full object-cover aspect-[4/5]"
-          />
-        </motion.div>
+    <section className="bg-[#F7F1E8] py-32 md:py-36">
+      <motion.div
+        ref={ref}
+        variants={containerVariants}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        className="mx-auto grid max-w-6xl items-center gap-14 px-6 md:grid-cols-2 md:gap-20"
+      >
+        <motion.div variants={itemVariants} className="order-2 md:order-1">
+          <div className="max-w-xl">
+            <h2 className="mb-8 font-serif text-3xl text-brown-900 md:text-4xl">
+              Cuidar também é acompanhar a vida
+            </h2>
 
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
-        >
-          <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-10 leading-snug">
-            Cuidar também é acompanhar a vida
-          </h2>
+            <div className="space-y-6 text-[1.03rem] leading-8 text-brown-700 md:text-[1.08rem]">
+              <p>
+                Quando a saúde é acompanhada com continuidade, o cuidado deixa
+                de ser apenas uma resposta aos momentos de doença e passa a
+                fazer parte da vida com mais presença, clareza e tranquilidade.
+              </p>
 
-          <div className="space-y-7 text-lg text-muted-foreground leading-relaxed">
-            <p>
-              Em saúde, confiança não se constrói apenas nos momentos de doença.
-              Ela nasce com o tempo, na continuidade do cuidado e na relação
-              entre médico e paciente.
-            </p>
+              <p>
+                Talvez você já tenha sentido como é difícil tomar decisões sobre
+                a própria saúde ou sobre a saúde de quem você ama sem alguém que
+                realmente conheça a sua história. Muitas vezes, o que falta não
+                é apenas atendimento — é vínculo, contexto e continuidade.
+              </p>
 
-            <p>
-              A Morobach parte da convicção de que a medicina pode ser mais
-              próxima, mais atenta e mais humana. Um cuidado que conhece a
-              história de cada família, acompanha suas mudanças e ajuda a tomar
-              decisões com tranquilidade ao longo da vida.
-            </p>
-
-            <p>
-              Acreditamos que cuidar não significa apenas tratar problemas
-              quando eles surgem, mas também estar presente para prevenir,
-              orientar e preservar a saúde com constância e responsabilidade.
-            </p>
+              <p>
+                A Morobach nasce dessa convicção: a de que a medicina pode ser
+                mais próxima, mais atenta e mais humana. Um cuidado que conhece
+                a trajetória de cada família, acompanha suas mudanças e ajuda a
+                preservar a saúde com responsabilidade ao longo do tempo.
+              </p>
+            </div>
           </div>
         </motion.div>
-      </div>
+
+        <motion.div variants={itemVariants} className="order-1 md:order-2">
+          <div className="overflow-hidden rounded-[28px]">
+            <img
+              src={emotionalImage}
+              alt="Médico em atendimento domiciliar acolhedor com paciente em ambiente residencial"
+              className="h-[520px] w-full object-cover md:h-[620px]"
+            />
+          </div>
+
+          <div className="mt-5 h-px w-24 bg-[#CDAE74]/70" />
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
