@@ -1,124 +1,79 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-morobach.jpg";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
-  visible: (delay = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      delay,
-      ease: [0.22, 1, 0.36, 1],
-    },
-  }),
-};
-
 const HeroSection = () => {
-  const { scrollY } = useScroll();
-
-  // Parallax visível
-  const backgroundY = useTransform(scrollY, [0, 1000], [0, 160]);
-  const contentY = useTransform(scrollY, [0, 1000], [0, -30]);
-
   return (
-    <section className="relative h-screen min-h-[760px] overflow-hidden bg-brown-950">
-      {/* Camada da imagem com parallax perceptível */}
-      <motion.div
-        style={{ y: backgroundY }}
-        className="absolute inset-0 scale-[1.18]"
-        aria-hidden="true"
-      >
-        <img
-          src={heroImage}
-          alt="Médico de família em atendimento domiciliar com uma família em ambiente elegante"
-          className="h-full w-full object-cover object-center"
-        />
-      </motion.div>
-
-      {/* Overlay principal visível */}
-      <div className="absolute inset-0 bg-brown-950/72" aria-hidden="true" />
-
-      {/* Camada central para melhorar leitura do título */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div
-  className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(32,18,10,0.55)_0%,rgba(32,18,10,0.35)_35%,rgba(32,18,10,0.15)_60%,transparent_80%)]"
-  aria-hidden="true"
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroImage})` }}
       />
 
-      {/* Tom quente da marca */}
-      <div
-        className="absolute inset-0 bg-[linear-gradient(180deg,rgba(53,29,16,0.24)_0%,rgba(53,29,16,0.18)_35%,rgba(32,18,10,0.42)_100%)]"
-        aria-hidden="true"
-      />
+      <div className="absolute inset-0 bg-foreground/50" />
 
-      {/* Vinheta para profundidade */}
-      <div
-        className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_35%,rgba(24,13,7,0.28)_100%)]"
-        aria-hidden="true"
-      />
+      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-primary-foreground/80 font-sans text-sm tracking-[0.3em] uppercase mb-8"
+        >
+          Morobach · Brasília
+        </motion.p>
 
-      <motion.div
-        style={{ y: contentY }}
-        className="relative z-10 mx-auto flex h-full max-w-7xl items-center justify-center px-6 py-28"
-      >
-        <div className="text-center text-white">
-          <motion.p
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-            custom={0.05}
-            className="mb-6 text-xs font-medium uppercase tracking-[0.45em] text-white/80"
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="font-serif text-5xl md:text-7xl text-primary-foreground font-medium leading-[1.08] mb-8"
+        >
+          Médico de família domiciliar
+          <br className="hidden md:block" /> para o cuidado contínuo da sua
+          família.
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-primary-foreground/85 font-sans text-lg md:text-xl font-light max-w-3xl mx-auto mb-12 leading-relaxed"
+        >
+          A Morobach oferece acompanhamento médico domiciliar contínuo em
+          Brasília, com foco em prevenção, promoção de saúde, coordenação do
+          cuidado e vínculo ao longo do tempo — no conforto da sua casa.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+        >
+          <a
+            href="#contato"
+            className="inline-block bg-primary text-primary-foreground px-10 py-4 text-sm tracking-[0.15em] uppercase font-sans hover:bg-soft-gold/90 transition-colors duration-300"
           >
-            Morobach
-          </motion.p>
+            Agendar avaliação inicial
+          </a>
 
-          <motion.h1
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-            custom={0.15}
-            className="mx-auto max-w-4xl text-5xl font-serif leading-[0.95] tracking-[-0.03em] text-white md:text-7xl"
+          <a
+            href="#modelo"
+            className="inline-block border border-primary-foreground/40 text-primary-foreground px-10 py-4 text-sm tracking-[0.15em] uppercase font-sans hover:bg-primary-foreground/10 transition-colors duration-300"
           >
-            Um médico de família para cuidar da saúde da sua casa.
-          </motion.h1>
+            Conheça o modelo Morobach
+          </a>
+        </motion.div>
 
-          <motion.p
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-            custom={0.28}
-            className="mx-auto mt-8 max-w-3xl text-lg leading-relaxed text-white/85 md:text-[1.35rem]"
-          >
-            A Morobach oferece acompanhamento médico domiciliar contínuo para
-            toda a família, com prevenção, promoção de saúde e coordenação do
-            cuidado ao longo do tempo — no conforto da sua casa.
-          </motion.p>
-
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-            custom={0.4}
-            className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row"
-          >
-            <a
-              href="https://wa.me/5561986218705"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex min-w-[290px] items-center justify-center rounded-none border border-[#D7B273] bg-[#D7B273] px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] text-brown-950 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#debc85]"
-            >
-              Agendar avaliação inicial
-            </a>
-
-            <a
-              href="#modelo-de-cuidado"
-              className="inline-flex min-w-[290px] items-center justify-center rounded-none border border-white/25 bg-transparent px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/5"
-            >
-              Conheça o modelo Morobach
-            </a>
-          </motion.div>
-        </div>
-      </motion.div>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mt-8 text-primary-foreground/70 font-sans text-sm md:text-[15px] tracking-[0.04em]"
+        >
+          Assinatura mensal · 1 consulta domiciliar por mês · cuidado para toda
+          a família que vive na mesma casa
+        </motion.p>
+      </div>
     </section>
   );
 };
