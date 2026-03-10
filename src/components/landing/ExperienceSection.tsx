@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import institutionalImage from "@/assets/institutional-care.jpg";
+import institutionalImage from "@/assets/institutional-care.png";
 
 const differentials = [
   {
