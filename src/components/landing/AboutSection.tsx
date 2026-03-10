@@ -6,7 +6,7 @@ export default function AboutSection() {
         {/* Imagem */}
         <div className="w-full">
           <img
-            src="/emotional-section-_F0CClGw.jpg"
+            src="/emotional-section.jpg"
             alt="Médico conversando com paciente em ambiente domiciliar"
             className="rounded-xl shadow-md w-full object-cover"
           />
