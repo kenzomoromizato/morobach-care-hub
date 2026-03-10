@@ -7,7 +7,7 @@ const fadeUp = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.75,
+      duration: 0.8,
       delay,
       ease: [0.22, 1, 0.36, 1],
     },
@@ -17,30 +17,41 @@ const fadeUp = {
 const HeroSection = () => {
   const { scrollY } = useScroll();
 
-  const imageY = useTransform(scrollY, [0, 600], [0, -40]);
-  const contentY = useTransform(scrollY, [0, 600], [0, -12]);
+  // Parallax mais perceptível
+  const imageY = useTransform(scrollY, [0, 800], [0, -90]);
+  const contentY = useTransform(scrollY, [0, 800], [0, -24]);
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-brown-950">
+      {/* Imagem com parallax */}
       <motion.div
+        style={{ y: imageY, scale: 1.08 }}
         className="absolute inset-0"
-        style={{ y: imageY }}
         aria-hidden="true"
       >
         <img
           src={heroImage}
           alt="Médico de família em atendimento domiciliar com uma família em ambiente elegante"
-          className="h-[108%] w-full object-cover"
+          className="h-full w-full object-cover"
         />
       </motion.div>
 
-      {/* manter o overlay como está, sem clarear */}
-      <div className="absolute inset-0 bg-brown-950/55" aria-hidden="true" />
+      {/* Overlay principal mais visível */}
+      <div className="absolute inset-0 bg-brown-950/60" aria-hidden="true" />
+
+      {/* Camada quente para preservar a identidade visual */}
       <div
-        className="absolute inset-0 bg-gradient-to-b from-brown-950/30 via-brown-950/20 to-brown-950/45"
+        className="absolute inset-0 bg-gradient-to-br from-brown-900/35 via-transparent to-brown-950/35"
         aria-hidden="true"
       />
 
+      {/* Vinheta suave para dar profundidade */}
+      <div
+        className="absolute inset-0 shadow-[inset_0_0_180px_rgba(40,20,10,0.35)]"
+        aria-hidden="true"
+      />
+
+      {/* Conteúdo */}
       <motion.div
         style={{ y: contentY }}
         className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center justify-center px-6 py-28"
