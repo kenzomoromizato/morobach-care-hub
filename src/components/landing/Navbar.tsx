@@ -37,7 +37,7 @@ const Navbar = () => {
         <nav className="hidden items-center gap-10 md:flex">
           <a
             href="#modelo"
-            className="text-sm tracking-[0.08em] text-[#4b3c33] transition-colors duration-300 hover:text-[#8c6a3d]"
+            className="text-[0.95rem] tracking-[0.1em] text-[#4b3c33] transition-colors duration-300 hover:text-[#8c6a3d]"
           >
             Modelo de cuidado
           </a>
