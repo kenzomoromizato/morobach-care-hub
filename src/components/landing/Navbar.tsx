@@ -28,7 +28,7 @@ const Navbar = () => {
           aria-label="Morobach"
         >
           <img
-            src="/assets/logo-morobach.png"
+            src="/morobach-logo-horizontal.png"
             alt="Logo Morobach"
             className="h-9 w-auto object-contain"
           />
