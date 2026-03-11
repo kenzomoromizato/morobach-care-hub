@@ -107,14 +107,14 @@ const HeroSection = () => {
               rel="noopener noreferrer"
               className="inline-flex min-w-[290px] items-center justify-center rounded-none border border-[#D7B273] bg-[#D7B273] px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] text-brown-950 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#debc85]"
             >
-              Agendar avaliação inicial
+              Agendar conversa inicial
             </a>
 
             <a
               href="#modelo-de-cuidado"
               className="inline-flex min-w-[290px] items-center justify-center rounded-none border border-white/25 bg-transparent px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/5"
             >
-              Conheça o modelo Morobach
+              Entender como funciona
             </a>
           </motion.div>
         </div>
