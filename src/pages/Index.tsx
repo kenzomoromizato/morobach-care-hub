@@ -6,11 +6,13 @@ import AboutSection from "@/components/landing/AboutSection";
 import ExperienceSection from "@/components/landing/ExperienceSection";
 import FAQSection from "@/components/landing/FAQSection";
 import Navbar from "@/components/landing/Navbar";
+import FloatingCTA from "@/components/landing/FloatingCTA";
 
 const Index = () => {
   return (
     <main>
       <Navbar />
+      <FloatingCTA />
       <HeroSection />
       <CareModelSection />
       <WhoIsItForSection />
