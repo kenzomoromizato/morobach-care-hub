@@ -5,10 +5,12 @@ import DoctorSection from "@/components/landing/DoctorSection";
 import AboutSection from "@/components/landing/AboutSection";
 import ExperienceSection from "@/components/landing/ExperienceSection";
 import FAQSection from "@/components/landing/FAQSection";
+import Navbar from "@/components/landing/Navbar";
 
 const Index = () => {
   return (
     <main>
+      <Navbar />
       <HeroSection />
       <CareModelSection />
       <WhoIsItForSection />
