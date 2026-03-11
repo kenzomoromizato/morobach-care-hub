@@ -15,10 +15,10 @@ const Navbar = () => {
       initial={{ y: -24, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+      className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-500 ${
         scrolled
-          ? "border-b border-[#c8a96a]/20 bg-[#f7f2ea]/85 backdrop-blur-xl shadow-[0_8px_30px_rgba(43,31,23,0.06)]"
-          : "bg-transparent"
+           ? "border-[#c8a96a]/20 bg-[#f7f2ea]/85 backdrop-blur-xl shadow-[0_8px_30px_rgba(43,31,23,0.06)]"
+           : "border-transparent bg-transparent shadow-none"
       }`}
     >
       <div className="mx-auto flex h-[76px] w-full max-w-7xl items-center justify-between px-6 md:px-8 lg:px-12">
