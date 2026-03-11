@@ -7,7 +7,7 @@ const DoctorSection = () => {
   const inView = useInView(ref, { once: true, margin: "-120px" });
 
   return (
-    <section className="bg-[#fbf8f3] py-28 md:py-36">
+    <section id="medico" className="bg-[#fbf8f3] py-28 md:py-36">
       <div ref={ref} className="mx-auto max-w-5xl px-6">
         <motion.div
           initial={{ opacity: 0, x: -28 }}
