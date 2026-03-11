@@ -22,7 +22,7 @@ const HeroSection = () => {
   const contentY = useTransform(scrollY, [0, 1000], [0, -30]);
 
   return (
-    <section className="relative h-screen min-h-[760px] overflow-hidden bg-brown-950">
+    <section className="relative pt-24 h-screen min-h-[760px] overflow-hidden bg-brown-950">
       {/* Camada da imagem com parallax perceptível */}
       <motion.div
         style={{ y: backgroundY }}
