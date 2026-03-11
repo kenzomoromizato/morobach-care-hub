@@ -44,21 +44,21 @@ const Navbar = () => {
 
           <a
             href="#medico"
-            className="text-sm tracking-[0.08em] text-[#4b3c33] transition-colors duration-300 hover:text-[#8c6a3d]"
+            className="text-[0.95rem] tracking-[0.1em] text-[#4b3c33] transition-colors duration-300 hover:text-[#8c6a3d]"
           >
             Médico
           </a>
 
           <a
             href="#sobre"
-            className="text-sm tracking-[0.08em] text-[#4b3c33] transition-colors duration-300 hover:text-[#8c6a3d]"
+            className="text-[0.95rem] tracking-[0.1em] text-[#4b3c33] transition-colors duration-300 hover:text-[#8c6a3d]"
           >
             Sobre
           </a>
 
           <a
             href="#faq"
-            className="text-sm tracking-[0.08em] text-[#4b3c33] transition-colors duration-300 hover:text-[#8c6a3d]"
+            className="text-[0.95rem] tracking-[0.1em] text-[#4b3c33] transition-colors duration-300 hover:text-[#8c6a3d]"
           >
             FAQ
           </a>
