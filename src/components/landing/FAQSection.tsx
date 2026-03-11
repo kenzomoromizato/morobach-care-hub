@@ -124,6 +124,10 @@ export default function FAQSection() {
           >
             Agendar conversa inicial
           </a>
+          
+          <p className="mt-4 text-sm text-[#6a5648]">
+            Sem compromisso. A conversa inicial é um primeiro passo para entender a sua necessidade.
+          </p>
         </div>
 
         {/* Contato e copyright */}
