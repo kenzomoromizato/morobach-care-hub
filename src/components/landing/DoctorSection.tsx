@@ -31,7 +31,7 @@ const DoctorSection = () => {
           <div className="mx-auto mt-6 h-px w-20 bg-[#c8a96a]/60" />
         </motion.div>
 
-        <div className="space-y-20 md:space-y-24">
+        <div className="space-y-24 md:space-y-28">
           {/* Kenzo */}
           <motion.article
             initial={{ opacity: 0, y: 32 }}
@@ -39,7 +39,7 @@ const DoctorSection = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="grid items-center gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-16"
           >
-            <div className="relative overflow-hidden rounded-[28px] bg-[#efe7db] shadow-[0_20px_60px_rgba(60,40,20,0.08)]">
+            <div className="relative overflow-hidden rounded-[30px] bg-[#efe7db] shadow-[0_24px_70px_rgba(60,40,20,0.08)]">
               <div className="aspect-[4/5] w-full">
                 <img
                   src={doctorImage}
@@ -90,6 +90,8 @@ const DoctorSection = () => {
             </div>
           </motion.article>
 
+          <div className="mx-auto h-px w-full max-w-5xl bg-gradient-to-r from-transparent via-[#c8a96a]/40 to-transparent" />
+
           {/* André - espelhado */}
           <motion.article
             initial={{ opacity: 0, y: 32 }}
@@ -116,27 +118,36 @@ const DoctorSection = () => {
 
               <div className="mt-8 space-y-5 text-[1.02rem] leading-8 text-[#4d3f36]">
                 <p>
-                  Escreva aqui o texto institucional do André, mantendo o mesmo
-                  tom da seção: humano, clínico, maduro e sem linguagem de
-                  marketing.
+                  André Breitenbach entende a medicina como uma prática de
+                  presença, escuta e responsabilidade. Para ele, atender bem não
+                  significa apenas conduzir tecnicamente um caso, mas oferecer
+                  ao paciente a sensação de que sua história foi realmente
+                  compreendida, com atenção aos detalhes que muitas vezes fazem
+                  diferença no cuidado.
                 </p>
 
                 <p>
-                  O ideal é mostrar como ele enxerga o cuidado longitudinal, a
-                  importância de compreender o contexto familiar e a forma como
-                  sua atuação complementa a proposta assistencial da Morobach.
+                  Seu modo de atuar valoriza consultas cuidadosas, orientação
+                  clara e acompanhamento próximo, sempre com o compromisso de
+                  buscar a melhor experiência possível para quem confia sua
+                  saúde ao médico. Excelência, nesse contexto, não está apenas
+                  na conduta correta, mas também na forma como o paciente é
+                  acolhido, respeitado e conduzido ao longo do tempo.
                 </p>
 
                 <p>
-                  Esse bloco deve reforçar autoridade, proximidade e coerência
-                  institucional, para que o André apareça como parte real da
-                  construção clínica da marca — e não apenas como um nome
-                  adicionado à seção.
+                  André tem especial apreço pelo cuidado com os pacientes mais
+                  velhos. Há, nesse acompanhamento, uma oportunidade de exercer
+                  a medicina com mais sensibilidade, paciência e profundidade,
+                  considerando não apenas doenças isoladas, mas também
+                  funcionalidade, autonomia, contexto familiar e qualidade de
+                  vida. Esse olhar reforça a proposta da Morobach de oferecer um
+                  cuidado mais humano, atento e duradouro.
                 </p>
               </div>
             </div>
 
-            <div className="order-1 relative overflow-hidden rounded-[28px] bg-[#efe7db] shadow-[0_20px_60px_rgba(60,40,20,0.08)] lg:order-2">
+            <div className="order-1 relative overflow-hidden rounded-[30px] bg-[#efe7db] shadow-[0_24px_70px_rgba(60,40,20,0.08)] lg:order-2">
               <div className="aspect-[4/5] w-full">
                 <img
                   src={andreImage}
