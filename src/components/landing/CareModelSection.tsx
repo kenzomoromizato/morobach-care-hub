@@ -54,7 +54,7 @@ const itemVariants = {
 
 export default function CareModelSection() {
   return (
-    <section id="modelo-de-cuidado" className="relative bg-[#F8F3EC] py-36">
+    <section id="modelo" className="relative bg-[#F8F3EC] py-36">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#CDAE74]/60 to-transparent" />
       <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#EDE3D4]/70 to-transparent" />
 
