@@ -10,10 +10,10 @@ const DoctorSection = () => {
     <section className="bg-[#fbf8f3] py-28 md:py-36">
       <div ref={ref} className="mx-auto max-w-5xl px-6">
         <motion.div
-          initial={{ opacity: 0, y: 28 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="mb-16 text-center"
+          initial={{ opacity: 0, x: -28 }}
+          animate={inView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.15 }}
+          className="overflow-hidden rounded-sm md:-ml-12 lg:-ml-16"
         >
           <p className="mb-4 text-[11px] font-medium uppercase tracking-[0.35em] text-foreground/55">
             Responsabilidade clínica
