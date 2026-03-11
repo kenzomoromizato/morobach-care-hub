@@ -48,7 +48,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="relative bg-[#F6F0E8] py-36 md:py-40">
+    <section id="faq" className="relative bg-[#F6F0E8] py-36 md:py-40">
       {/* Separação visual do bloco anterior */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#D7C2A3]/70 to-transparent" />
       <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white/55 to-transparent" />
