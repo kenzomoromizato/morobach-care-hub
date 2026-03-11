@@ -32,7 +32,7 @@ const DoctorSection = () => {
             initial={{ opacity: 0, x: -28 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="overflow-hidden rounded-sm"
+            className="text-foreground md:max-w-[30rem] md:ml-auto"
           >
             <img
               src={doctorImage}
