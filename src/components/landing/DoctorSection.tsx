@@ -110,10 +110,10 @@ const DoctorSection = () => {
                 Médico
               </p>
 
-              <p className="mt-2 text-sm text-[#6a5648]">CRM-DF [preencher]</p>
+              <p className="mt-2 text-sm text-[#6a5648]">CRM-DF 33665</p>
 
               <p className="mt-2 text-sm text-[#6a5648]">
-                [formação / residência / credencial principal]
+                Formado pela Escola Superior de Ciências da Saúde (ESCS)
               </p>
 
               <div className="mt-8 space-y-5 text-[1.02rem] leading-8 text-[#4d3f36]">
