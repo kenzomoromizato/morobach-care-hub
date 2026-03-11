@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import MedicoDeFamiliaBrasilia from "./pages/MedicoDeFamiliaBrasilia";
 import NotFound from "./pages/NotFound";
+import Navbar from "./components/Navbar"
 
 function App() {
   return (
