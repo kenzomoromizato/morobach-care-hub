@@ -32,7 +32,7 @@ export default function AboutSection() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="bg-[#F7F1E8] py-36 md:py-40">
+    <section id="sobre" className="bg-[#F7F1E8] py-36 md:py-40">
       <motion.div
         ref={ref}
         variants={containerVariants}
