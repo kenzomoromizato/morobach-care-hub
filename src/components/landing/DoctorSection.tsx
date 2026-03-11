@@ -68,23 +68,15 @@ const DoctorSection = () => {
 
               <div className="mt-8 space-y-5 text-[1.02rem] leading-8 text-[#4d3f36]">
                 <p>
-                  A ideia da Morobach surgiu de algo que a prática médica mostra
-                  com frequência: muitas decisões em saúde ficam mais difíceis
-                  quando o cuidado acontece de forma fragmentada.
+                   A ideia da Morobach começou a se formar ainda durante a graduação em medicina. Ao longo da formação clínica, ficou cada vez mais evidente como a medicina caminhava em direção a uma especialização crescente, com muitos profissionais extremamente preparados em áreas específicas, mas com menos espaço para o acompanhamento contínuo das pessoas ao longo do tempo.
                 </p>
 
                 <p>
-                  Quando o médico acompanha as pessoas ao longo do tempo, ele
-                  entende melhor o contexto em que cada problema aparece — a
-                  rotina da família, os fatores de risco, as preocupações e as
-                  prioridades de cada momento da vida.
+                   Nesse contexto, o cuidado mais próximo — aquele que acompanha a rotina, o contexto familiar e a evolução da saúde de cada paciente — muitas vezes acaba ficando em segundo plano. Ainda assim, é justamente esse acompanhamento longitudinal que frequentemente permite compreender melhor os problemas e organizar o cuidado de forma mais clara e responsável.
                 </p>
 
                 <p>
-                  O acompanhamento domiciliar proposto pela Morobach parte dessa
-                  lógica. Estar mais próximo permite observar com mais atenção,
-                  orientar com mais clareza e organizar o cuidado de forma mais
-                  responsável ao longo do tempo.
+                   A Morobach nasce desse olhar. A proposta é resgatar um modelo de cuidado mais próximo, estruturado e atento, no qual o médico acompanha a família ao longo do tempo, entende seu contexto e ajuda a organizar decisões em saúde com mais serenidade e continuidade.
                 </p>
               </div>
             </div>
@@ -118,31 +110,15 @@ const DoctorSection = () => {
 
               <div className="mt-8 space-y-5 text-[1.02rem] leading-8 text-[#4d3f36]">
                 <p>
-                  André Breitenbach entende a medicina como uma prática de
-                  presença, escuta e responsabilidade. Para ele, atender bem não
-                  significa apenas conduzir tecnicamente um caso, mas oferecer
-                  ao paciente a sensação de que sua história foi realmente
-                  compreendida, com atenção aos detalhes que muitas vezes fazem
-                  diferença no cuidado.
+                  André Breitenbach compartilha da mesma convicção que deu origem à Morobach: a de que um bom cuidado médico começa pela compreensão real da pessoa, e não apenas pela condução pontual de um problema de saúde. A medicina ganha mais sentido quando existe continuidade, quando o médico acompanha a trajetória do paciente e consegue enxergar sua saúde dentro de um contexto mais amplo.
                 </p>
 
                 <p>
-                  Seu modo de atuar valoriza consultas cuidadosas, orientação
-                  clara e acompanhamento próximo, sempre com o compromisso de
-                  buscar a melhor experiência possível para quem confia sua
-                  saúde ao médico. Excelência, nesse contexto, não está apenas
-                  na conduta correta, mas também na forma como o paciente é
-                  acolhido, respeitado e conduzido ao longo do tempo.
+                  Em sua prática clínica, André valoriza consultas cuidadosas, escuta atenta e orientações claras. Para ele, atender bem significa dedicar tempo para compreender cada situação com profundidade e oferecer ao paciente segurança nas decisões relacionadas à sua saúde.
                 </p>
 
                 <p>
-                  André tem especial apreço pelo cuidado com os pacientes mais
-                  velhos. Há, nesse acompanhamento, uma oportunidade de exercer
-                  a medicina com mais sensibilidade, paciência e profundidade,
-                  considerando não apenas doenças isoladas, mas também
-                  funcionalidade, autonomia, contexto familiar e qualidade de
-                  vida. Esse olhar reforça a proposta da Morobach de oferecer um
-                  cuidado mais humano, atento e duradouro.
+                  Ele tem também especial apreço pelo cuidado com pacientes mais velhos. Nesse acompanhamento, a medicina exige ainda mais sensibilidade e atenção aos detalhes, considerando não apenas doenças específicas, mas também autonomia, funcionalidade, história de vida e dinâmica familiar. Esse olhar reforça o compromisso da Morobach com um cuidado próximo, humano e duradouro.
                 </p>
               </div>
             </div>
