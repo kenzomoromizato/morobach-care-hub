@@ -65,7 +65,7 @@ const Navbar = () => {
         </nav>
 
         <a
-          href="#contato"
+          href="https://wa.me/5561996703427"
           className="hidden rounded-full border border-[#c8a96a] px-5 py-2 text-sm tracking-[0.06em] text-[#3e3128] transition-all duration-300 hover:bg-[#c8a96a] hover:text-white md:inline-flex"
         >
           Agendar
