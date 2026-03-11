@@ -54,10 +54,12 @@ const DoctorSection = () => {
                 Kenzo Moromizato
               </h3>
 
-              <p className="mt-3 text-sm uppercase tracking-[0.22em] text-foreground/60">
-                Médico
-              </p>
+            <div className="mt-4 h-[1px] w-16 bg-primary/40"></div>
 
+            <p className="mt-4 text-[11px] uppercase tracking-[0.35em] text-foreground/60">
+              Médico
+            </p>
+              
               <div className="mt-6 space-y-2 text-[15px] leading-relaxed text-foreground/72">
                 <p>CRM-DF 35581</p>
                 <p>Formado pela Escola Superior de Ciências da Saúde (ESCS)</p>
