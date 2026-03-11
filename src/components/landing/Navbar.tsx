@@ -32,9 +32,6 @@ const Navbar = () => {
             alt="Logo Morobach"
             className="h-9 w-auto object-contain"
           />
-          <span className="font-serif text-[1.05rem] tracking-[0.08em] text-[#3e3128]">
-            Morobach
-          </span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
