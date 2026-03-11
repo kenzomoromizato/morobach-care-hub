@@ -111,7 +111,7 @@ const HeroSection = () => {
             </a>
 
             <a
-              href="#modelo-de-cuidado"
+              href="#modelo"
               className="inline-flex min-w-[290px] items-center justify-center rounded-none border border-white/25 bg-transparent px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/5"
             >
               Entender como funciona
