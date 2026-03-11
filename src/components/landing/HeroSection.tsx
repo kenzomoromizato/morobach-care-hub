@@ -102,7 +102,7 @@ const HeroSection = () => {
             className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row"
           >
             <a
-              href="https://wa.me/5561986218705"
+              href="https://wa.me/5561996703427?text=Olá,%20gostaria%20de%20mais%20informações%20a%20respeito%20da%20conversa%20inicial%20proposta%20pela%20Morobach."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex min-w-[290px] items-center justify-center rounded-none border border-[#D7B273] bg-[#D7B273] px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] text-brown-950 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#debc85]"
