@@ -65,7 +65,7 @@ const Navbar = () => {
         </nav>
 
         <a
-          href="https://wa.me/5561996703427"
+          href="https://wa.me/5561996703427?text=Olá,%20gostaria%20de%20mais%20informações%20a%20respeito%20da%20conversa%20inicial%20proposta%20pela%20Morobach."
           className="hidden rounded-full border border-[#c8a96a] px-5 py-2 text-sm tracking-[0.06em] text-[#3e3128] transition-all duration-300 hover:bg-[#c8a96a] hover:text-white md:inline-flex"
         >
           Contato
