@@ -144,7 +144,7 @@ export default function FAQSection() {
             </a>
 
             <a
-              href="https://wa.me/5561986218705"
+              href="https://wa.me/556135323082?text=Olá,%20gostaria%20de%20mais%20informações%20a%20respeito%20da%20conversa%20inicial%20proposta%20pela%20Morobach."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm transition-all duration-300 hover:-translate-y-[1px] hover:opacity-75"
