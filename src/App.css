@@ -43,23 +43,30 @@
 
 .contrast_dark {
   color: #1A1A18;
+  background-color: #1A1A18;
 }
 .subtitle {
   color: #7E6C5A;
+  background-color: #7E6C5A;
 }
 .accent {
   color: #A37E2C;
+  background-color:#A37E2C;
 }
 .gold {
   color: #C2A21DFF;
+  background-color:#C2A21DFF;
 }
 .detail_heavy {
   color: #2C4A3E;
+  background-color:#2C4A3E;
 }
 .detail_light {
   color: #8AAE9E;
+  background-color:#8AAE9E;
 }
 .dominant {
   color: #F5F0E8;
+  background-color:#F5F0E8;
 }
 

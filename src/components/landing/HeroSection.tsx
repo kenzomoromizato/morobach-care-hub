@@ -79,7 +79,7 @@ const HeroSection = () => {
             custom={0.15}
             className="mx-auto max-w-4xl text-5xl font-serif leading-[0.95] tracking-[-0.03em] text-white md:text-7xl"
           >
-            Médico de família domiciliar para o cuidado contínuo da sua família teste.
+            Médico de família domiciliar para o cuidado contínuo da sua família.
           </motion.h1>
 
           <motion.p
