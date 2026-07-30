@@ -84,7 +84,7 @@ const DoctorSection = () => {
 
           <div className="mx-auto h-px w-full max-w-5xl bg-gradient-to-r from-transparent via-[#c8a96a]/40 to-transparent" />
 
-          {/* André - espelhado */}
+          {/* André - espelhado 
           <motion.article
             initial={{ opacity: 0, y: 32 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -132,7 +132,7 @@ const DoctorSection = () => {
                 />
               </div>
             </div>
-          </motion.article>
+          </motion.article>*/}
         </div>
 
         <motion.p
