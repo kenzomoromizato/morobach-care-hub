@@ -36,26 +36,8 @@ const HeroSection = () => {
         />
       </motion.div>
 
-      {/* Overlay principal visível */}
-      <div className="absolute inset-0 bg-brown-950/72" aria-hidden="true" />
-
-      {/* Camada central para melhorar leitura do título */}
-      <div
-        className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(32,18,10,0.55)_0%,rgba(32,18,10,0.35)_35%,rgba(32,18,10,0.15)_60%,transparent_80%)]"
-        aria-hidden="true"
-      />
-
-      {/* Tom quente da marca */}
-      <div
-        className="absolute inset-0 bg-[linear-gradient(180deg,rgba(53,29,16,0.24)_0%,rgba(53,29,16,0.18)_35%,rgba(32,18,10,0.42)_100%)]"
-        aria-hidden="true"
-      />
-
-      {/* Vinheta para profundidade */}
-      <div
-        className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_35%,rgba(24,13,7,0.28)_100%)]"
-        aria-hidden="true"
-      />
+      {/* Overlay para tingir a imagem com o verde Dark Details */}
+      <div className="absolute inset-0 bg-theme-detail-heavy/70" aria-hidden="true" />
 
       <motion.div
         style={{ y: contentY }}
@@ -105,7 +87,7 @@ const HeroSection = () => {
               href="https://wa.me/556135323082?text=Olá,%20gostaria%20de%20mais%20informações%20a%20respeito%20da%20conversa%20inicial%20proposta%20pela%20Morobach."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-w-[290px] items-center justify-center rounded-none border border-[#D7B273] bg-[#D7B273] px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] text-brown-950 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#debc85]"
+              className="inline-flex min-w-[290px] items-center justify-center rounded-none border border-theme-accent bg-theme-accent px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] text-theme-dominant transition-all duration-300 hover:-translate-y-0.5 hover:bg-theme-accent/85"
             >
               Agendar conversa inicial
             </a>

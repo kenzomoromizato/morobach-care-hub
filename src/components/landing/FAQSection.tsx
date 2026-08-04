@@ -120,7 +120,7 @@ export default function FAQSection() {
             href="https://wa.me/556135323082?text=Olá,%20gostaria%20de%20mais%20informações%20a%20respeito%20da%20conversa%20inicial%20proposta%20pela%20Morobach."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-none border border-[#D7B273] bg-[#D7B273] px-10 py-4 text-sm font-medium uppercase tracking-[0.2em] text-brown-950 transition-all duration-300 ease-out hover:-translate-y-[1px] hover:bg-[#e0bf8c]"
+            className="inline-flex items-center justify-center rounded-none border border-theme-accent bg-theme-accent px-10 py-4 text-sm font-medium uppercase tracking-[0.2em] text-theme-dominant transition-all duration-300 ease-out hover:-translate-y-[1px] hover:bg-theme-accent/85"
           >
             Agendar conversa inicial
           </a>
