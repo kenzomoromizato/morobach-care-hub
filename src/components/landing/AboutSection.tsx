@@ -32,7 +32,7 @@ export default function AboutSection() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="sobre" className="bg-[#F7F1E8] py-36 md:py-40">
+    <section id="sobre" className="bg-paper py-36 md:py-40">
       <motion.div
         ref={ref}
         variants={containerVariants}
@@ -76,7 +76,7 @@ export default function AboutSection() {
 
         {/* IMAGEM */}
         <motion.div variants={itemVariants} className="order-1 md:order-2">
-          <div className="overflow-hidden rounded-[28px]">
+          <div className="overflow-hidden rounded-[28px] border-4 border-theme-gold">
             <img
               src={emotionalImage}
               alt="Médico em atendimento domiciliar acolhedor com paciente em ambiente residencial"

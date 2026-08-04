@@ -25,7 +25,7 @@ const items = [
 
 export default function HowMembershipWorksSection() {
   return (
-    <section className="py-24 md:py-32 bg-background">
+    <section className="py-24 md:py-32 bg-paper">
       <div className="container max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -53,7 +53,7 @@ export default function HowMembershipWorksSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="p-8 rounded-2xl border border-border bg-background shadow-sm"
+              className="p-8 rounded-2xl border border-border bg-paper shadow-sm"
             >
               <h3 className="font-serif text-xl text-foreground mb-3">
                 {item.title}

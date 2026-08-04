@@ -56,7 +56,7 @@ export default function ExperienceSection() {
       >
         {/* Imagem */}
         <motion.div variants={itemVariants}>
-          <div className="overflow-hidden rounded-[28px]">
+          <div className="overflow-hidden rounded-[28px] border-4 border-theme-gold">
             <img
               src={institutionalImage}
               alt="Médico de família em conversa tranquila com paciente em ambiente domiciliar"
@@ -86,13 +86,13 @@ export default function ExperienceSection() {
                 <motion.div
                   key={item.title}
                   variants={itemVariants}
-                  className="rounded-[22px] border border-brown-200/50 bg-[#FBF7F1] p-8 transition-all duration-300 ease-out hover:-translate-y-[1px] hover:shadow-md"
+                  className="rounded-[22px] border border-theme-detail-light/30 bg-theme-detail-heavy p-8 transition-all duration-300 ease-out hover:-translate-y-[1px] hover:shadow-md"
                 >
-                  <h3 className="mb-3 font-serif text-[1.32rem] leading-tight text-brown-900">
+                  <h3 className="mb-3 font-serif text-[1.32rem] leading-tight text-theme-dominant">
                     {item.title}
                   </h3>
 
-                  <p className="text-[0.98rem] leading-7 text-brown-600">
+                  <p className="text-[0.98rem] leading-7 text-theme-dominant/75">
                     {item.description}
                   </p>
                 </motion.div>

@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scrollbar-gutter: stable both-edges;
+}
+
 @layer base {
   :root {
     --background: 30 30% 94%;
@@ -50,6 +54,15 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* New theme palette (not yet applied to the site) */
+    --theme-contrast-dark: 60 4% 10%;
+    --theme-subtitle: 30 17% 42%;
+    --theme-accent: 41 57% 41%;
+    --theme-gold: 48 74% 44%;
+    --theme-detail-heavy: 156 25% 23%;
+    --theme-detail-light: 153 18% 61%;
+    --theme-dominant: 37 39% 94%;
   }
 }
 
@@ -64,35 +77,6 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
-  }
-
-  .contrast_dark {
-    color: #1A1A18;
-    background-color: #1A1A18;
-  }
-  .subtitle {
-    color: #7E6C5A;
-    background-color: #7E6C5A;
-  }
-  .accent {
-    color: #A37E2C;
-    background-color:#A37E2C;
-  }
-  .gold {
-    color: #C2A21DFF;
-    background-color:#C2A21DFF;
-  }
-  .detail_heavy {
-    color: #2C4A3E;
-    background-color:#2C4A3E;
-  }
-  .detail_light {
-    color: #8AAE9E;
-    background-color:#8AAE9E;
-  }
-  .dominant {
-    color: #F5F0E8;
-    background-color:#F5F0E8;
   }
 }
 
@@ -109,5 +93,20 @@
   .gold-line-wide {
     @apply h-px w-full;
     background: linear-gradient(90deg, transparent, hsl(var(--soft-gold)), transparent);
+  }
+
+  .bg-paper {
+    background-image: url('./assets/plain-white-paper.jpg');
+    background-repeat: repeat;
+  }
+
+  .bg-paper-70 {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('./assets/plain-white-paper.jpg');
+    background-repeat: repeat;
+  }
+
+  .bg-paper-60 {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('./assets/plain-white-paper.jpg');
+    background-repeat: repeat;
   }
 }

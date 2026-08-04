@@ -1,6 +1,6 @@
 function MedicoDeFamiliaBrasilia() {
     return (
-      <main className="min-h-screen bg-background text-foreground">
+      <main className="min-h-screen bg-paper text-foreground">
         <section className="py-24 md:py-32">
           <div className="container max-w-5xl mx-auto px-6">
             <p className="font-sans text-xs tracking-[0.3em] uppercase text-muted-foreground mb-5">
@@ -18,7 +18,7 @@ function MedicoDeFamiliaBrasilia() {
             </p>
   
             <div className="grid md:grid-cols-2 gap-10 mb-16">
-              <div className="rounded-2xl border border-border p-8 bg-background/70">
+              <div className="rounded-2xl border border-border p-8 bg-paper-70">
                 <h2 className="font-serif text-2xl mb-4">
                   O que faz um médico de família
                 </h2>
@@ -29,7 +29,7 @@ function MedicoDeFamiliaBrasilia() {
                 </p>
               </div>
   
-              <div className="rounded-2xl border border-border p-8 bg-background/70">
+              <div className="rounded-2xl border border-border p-8 bg-paper-70">
                 <h2 className="font-serif text-2xl mb-4">
                   Atendimento domiciliar em Brasília
                 </h2>

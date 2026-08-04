@@ -10,6 +10,14 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const linkColor = scrolled
+    ? "text-[#4b3c33] hover:text-[#8c6a3d]"
+    : "text-theme-dominant hover:text-theme-dominant/80";
+
+  const ctaColor = scrolled
+    ? "border-[#c8a96a] text-[#3e3128]"
+    : "border-theme-dominant text-theme-dominant";
+
   return (
     <motion.header
       initial={{ y: -24, opacity: 0 }}
@@ -37,28 +45,28 @@ const Navbar = () => {
         <nav className="hidden items-center gap-10 md:flex">
           <a
             href="#modelo"
-            className="text-[0.95rem] tracking-[0.1em] text-[#4b3c33] transition-colors duration-300 hover:text-[#8c6a3d]"
+            className={`text-[0.95rem] tracking-[0.1em] transition-colors duration-300 ${linkColor}`}
           >
             Modelo de cuidado
           </a>
 
           <a
             href="#medico"
-            className="text-[0.95rem] tracking-[0.1em] text-[#4b3c33] transition-colors duration-300 hover:text-[#8c6a3d]"
+            className={`text-[0.95rem] tracking-[0.1em] transition-colors duration-300 ${linkColor}`}
           >
             Médico
           </a>
 
           <a
             href="#sobre"
-            className="text-[0.95rem] tracking-[0.1em] text-[#4b3c33] transition-colors duration-300 hover:text-[#8c6a3d]"
+            className={`text-[0.95rem] tracking-[0.1em] transition-colors duration-300 ${linkColor}`}
           >
             Sobre
           </a>
 
           <a
             href="#faq"
-            className="text-[0.95rem] tracking-[0.1em] text-[#4b3c33] transition-colors duration-300 hover:text-[#8c6a3d]"
+            className={`text-[0.95rem] tracking-[0.1em] transition-colors duration-300 ${linkColor}`}
           >
             FAQ
           </a>
@@ -66,7 +74,7 @@ const Navbar = () => {
 
         <a
           href="https://wa.me/556135323082?text=Olá,%20gostaria%20de%20mais%20informações%20a%20respeito%20da%20conversa%20inicial%20proposta%20pela%20Morobach."
-          className="hidden rounded-full border border-[#c8a96a] px-5 py-2 text-sm tracking-[0.06em] text-[#3e3128] transition-all duration-300 hover:bg-[#c8a96a] hover:text-white md:inline-flex"
+          className={`hidden rounded-full border px-5 py-2 text-sm tracking-[0.06em] transition-all duration-300 hover:bg-[#c8a96a] hover:text-white md:inline-flex ${ctaColor}`}
         >
           Contato
         </a>

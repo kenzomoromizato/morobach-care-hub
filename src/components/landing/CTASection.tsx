@@ -6,13 +6,13 @@ export default function CTASection() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="contato" className="py-24 md:py-32 bg-background">
+    <section id="contato" className="py-24 md:py-32 bg-paper">
       <div ref={ref} className="container max-w-5xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="rounded-3xl border border-border bg-cream p-10 md:p-14 text-center shadow-sm"
+          className="rounded-3xl border border-border bg-paper p-10 md:p-14 text-center shadow-sm"
         >
           <p className="font-sans text-xs tracking-[0.3em] uppercase text-muted-foreground mb-5">
             Próximo passo

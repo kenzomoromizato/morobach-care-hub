@@ -11,7 +11,7 @@ const DoctorSection = () => {
     <section
       id="medico"
       ref={ref}
-      className="relative overflow-hidden bg-[#f7f2ea] py-24 md:py-32"
+      className="relative overflow-hidden bg-paper py-24 md:py-32"
     >
       <div className="mx-auto max-w-7xl px-6 md:px-8 lg:px-12">
         <motion.div
@@ -39,7 +39,7 @@ const DoctorSection = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="grid items-center gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-16"
           >
-            <div className="relative overflow-hidden rounded-[30px] bg-[#efe7db] shadow-[0_24px_70px_rgba(60,40,20,0.08)]">
+            <div className="relative overflow-hidden rounded-[30px] border-4 border-theme-gold bg-paper shadow-[0_24px_70px_rgba(60,40,20,0.08)]">
               <div className="aspect-[4/5] w-full">
                 <img
                   src={doctorImage}
@@ -123,7 +123,7 @@ const DoctorSection = () => {
               </div>
             </div>
 
-            <div className="order-1 relative overflow-hidden rounded-[30px] bg-[#efe7db] shadow-[0_24px_70px_rgba(60,40,20,0.08)] lg:order-2">
+            <div className="order-1 relative overflow-hidden rounded-[30px] border-4 border-theme-gold bg-paper shadow-[0_24px_70px_rgba(60,40,20,0.08)] lg:order-2">
               <div className="aspect-[4/5] w-full">
                 <img
                   src={andreImage}

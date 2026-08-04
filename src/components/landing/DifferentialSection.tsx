@@ -13,7 +13,7 @@ const DifferentialSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-28 md:py-36 bg-cream">
+    <section className="py-28 md:py-36 bg-paper">
       <div className="gold-line-wide mb-28" />
       <div ref={ref} className="container max-w-4xl mx-auto px-6 text-center">
         <motion.div

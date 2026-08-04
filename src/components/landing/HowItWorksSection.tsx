@@ -38,7 +38,7 @@ export default function HowItWorksSection() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="como-funciona" className="py-24 md:py-32 bg-background">
+    <section id="como-funciona" className="py-24 md:py-32 bg-paper">
       <div ref={ref} className="container max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -65,7 +65,7 @@ export default function HowItWorksSection() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.12 + i * 0.08 }}
-                className="rounded-2xl border border-border bg-background/60 p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow"
+                className="rounded-2xl border border-border bg-paper-60 p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="flex items-start justify-between gap-6">
                   <div className="flex items-center gap-4">

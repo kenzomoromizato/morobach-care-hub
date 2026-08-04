@@ -56,6 +56,13 @@ export default {
         "soft-gold": "hsl(var(--soft-gold))",
         "gold-light": "hsl(var(--gold-light))",
         cream: "hsl(var(--cream))",
+        "theme-contrast-dark": "hsl(var(--theme-contrast-dark))",
+        "theme-subtitle": "hsl(var(--theme-subtitle))",
+        "theme-accent": "hsl(var(--theme-accent))",
+        "theme-gold": "hsl(var(--theme-gold))",
+        "theme-detail-heavy": "hsl(var(--theme-detail-heavy))",
+        "theme-detail-light": "hsl(var(--theme-detail-light))",
+        "theme-dominant": "hsl(var(--theme-dominant))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

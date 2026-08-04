@@ -15,7 +15,7 @@ const ProblemSection = () => {
 
 
   return (
-    <section className="py-28 md:py-36 bg-background">
+    <section className="py-28 md:py-36 bg-paper">
       <div ref={ref} className="container max-w-5xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

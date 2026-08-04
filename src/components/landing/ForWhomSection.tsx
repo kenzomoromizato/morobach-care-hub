@@ -24,7 +24,7 @@ const ForWhomSection = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="absolute inset-0 bg-warm-beige/85 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-paper opacity-85 backdrop-blur-sm" />
       <div ref={ref} className="container max-w-5xl mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
