@@ -14,7 +14,11 @@ const fadeUp = {
   }),
 };
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  topOffset?: number;
+}
+
+const HeroSection = ({ topOffset = 0 }: HeroSectionProps) => {
   const { scrollY } = useScroll();
 
   // Parallax visível
@@ -22,7 +26,11 @@ const HeroSection = () => {
   const contentY = useTransform(scrollY, [0, 1000], [0, -30]);
 
   return (
-    <section id="topo" className="relative pt-24 h-screen min-h-[760px] overflow-hidden bg-brown-950">
+    <section
+      id="topo"
+      style={{ paddingTop: `calc(6rem + ${topOffset}px)` }}
+      className="relative h-screen min-h-[760px] overflow-hidden bg-brown-950"
+    >
       {/* Camada da imagem com parallax perceptível */}
       <motion.div
         style={{ y: backgroundY }}
@@ -37,7 +45,7 @@ const HeroSection = () => {
       </motion.div>
 
       {/* Overlay para tingir a imagem com o verde Dark Details */}
-      <div className="absolute inset-0 bg-theme-detail-heavy/70" aria-hidden="true" />
+      <div className="absolute inset-0 bg-theme-detail-heavy/80" aria-hidden="true" />
 
       <motion.div
         style={{ y: contentY }}
@@ -59,7 +67,7 @@ const HeroSection = () => {
             initial="hidden"
             animate="visible"
             custom={0.15}
-            className="mx-auto max-w-4xl text-5xl font-serif leading-[0.95] tracking-[-0.03em] text-white md:text-7xl"
+            className="mx-auto max-w-4xl text-5xl font-serif font-light italic leading-[0.95] tracking-[-0.03em] text-white md:text-7xl"
           >
             Médico de família domiciliar para o cuidado contínuo da sua família.
           </motion.h1>
@@ -87,14 +95,14 @@ const HeroSection = () => {
               href="https://wa.me/556135323082?text=Olá,%20gostaria%20de%20mais%20informações%20a%20respeito%20da%20conversa%20inicial%20proposta%20pela%20Morobach."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-w-[290px] items-center justify-center rounded-none border border-theme-accent bg-theme-accent px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] text-theme-dominant transition-all duration-300 hover:-translate-y-0.5 hover:bg-theme-accent/85"
+              className="inline-flex min-w-[290px] items-center justify-center rounded-none border border-white bg-theme-accent px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] text-theme-dominant transition-all duration-300 hover:-translate-y-0.5 hover:bg-theme-accent/85"
             >
               Agendar conversa inicial
             </a>
 
             <a
               href="#modelo"
-              className="inline-flex min-w-[290px] items-center justify-center rounded-none border border-white/25 bg-transparent px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/5"
+              className="inline-flex min-w-[290px] items-center justify-center rounded-none border border-white bg-transparent px-8 py-4 text-sm font-medium uppercase tracking-[0.18em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-theme-accent hover:text-white"
             >
               Entender como funciona
             </a>

@@ -39,7 +39,7 @@ const DoctorSection = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="grid items-center gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-16"
           >
-            <div className="relative overflow-hidden rounded-[30px] border-4 border-theme-gold bg-paper shadow-[0_24px_70px_rgba(60,40,20,0.08)]">
+            <div className="relative overflow-hidden rounded-[30px] border-2 border-theme-gold bg-paper shadow-[0_24px_70px_rgba(60,40,20,0.08)]">
               <div className="aspect-[4/5] w-full">
                 <img
                   src={doctorImage}
@@ -82,9 +82,7 @@ const DoctorSection = () => {
             </div>
           </motion.article>
 
-          <div className="mx-auto h-px w-full max-w-5xl bg-gradient-to-r from-transparent via-[#c8a96a]/40 to-transparent" />
-
-          {/* André - espelhado 
+          {/* André - espelhado
           <motion.article
             initial={{ opacity: 0, y: 32 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -123,7 +121,7 @@ const DoctorSection = () => {
               </div>
             </div>
 
-            <div className="order-1 relative overflow-hidden rounded-[30px] border-4 border-theme-gold bg-paper shadow-[0_24px_70px_rgba(60,40,20,0.08)] lg:order-2">
+            <div className="order-1 relative overflow-hidden rounded-[30px] border-2 border-theme-gold bg-paper shadow-[0_24px_70px_rgba(60,40,20,0.08)] lg:order-2">
               <div className="aspect-[4/5] w-full">
                 <img
                   src={andreImage}
@@ -134,15 +132,6 @@ const DoctorSection = () => {
             </div>
           </motion.article>*/}
         </div>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
-          className="mx-auto mt-20 max-w-3xl text-center font-serif text-2xl leading-relaxed text-[#3a2d26] md:text-3xl"
-        >
-          Boa medicina depende de conhecer as pessoas ao longo do tempo.
-        </motion.p>
       </div>
     </section>
   );

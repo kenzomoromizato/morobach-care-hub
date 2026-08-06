@@ -76,7 +76,7 @@ export default function AboutSection() {
 
         {/* IMAGEM */}
         <motion.div variants={itemVariants} className="order-1 md:order-2">
-          <div className="overflow-hidden rounded-[28px] border-4 border-theme-gold">
+          <div className="overflow-hidden rounded-[28px] border-2 border-theme-gold">
             <img
               src={emotionalImage}
               alt="Médico em atendimento domiciliar acolhedor com paciente em ambiente residencial"

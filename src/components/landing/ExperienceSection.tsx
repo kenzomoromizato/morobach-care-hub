@@ -56,7 +56,7 @@ export default function ExperienceSection() {
       >
         {/* Imagem */}
         <motion.div variants={itemVariants}>
-          <div className="overflow-hidden rounded-[28px] border-4 border-theme-gold">
+          <div className="overflow-hidden rounded-[28px] border-2 border-theme-gold">
             <img
               src={institutionalImage}
               alt="Médico de família em conversa tranquila com paciente em ambiente domiciliar"

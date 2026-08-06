@@ -10,7 +10,11 @@ const navLinks = [
   { href: "#faq", label: "FAQ" },
 ];
 
-const Navbar = () => {
+interface NavbarProps {
+  topOffset?: number;
+}
+
+const Navbar = ({ topOffset = 0 }: NavbarProps) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -36,7 +40,8 @@ const Navbar = () => {
       initial={{ y: -24, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-500 ${
+      style={{ top: topOffset }}
+      className={`fixed inset-x-0 z-50 border-b transition-all duration-500 ${
         scrolled
            ? "border-[#c8a96a]/20 bg-[#f7f2ea]/85 backdrop-blur-xl shadow-[0_8px_30px_rgba(43,31,23,0.06)]"
            : "border-transparent bg-transparent shadow-none"
