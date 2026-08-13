@@ -43,7 +43,7 @@ export default function AboutSection() {
         {/* TEXTO */}
         <motion.div variants={itemVariants} className="order-2 md:order-1">
           <div className="max-w-lg">
-            <h2 className="font-serif text-3xl text-brown-900 md:text-4xl">
+            <h2 className="font-serif italic text-3xl text-brown-900 md:text-4xl">
               Cuidar também é acompanhar a vida
             </h2>
 

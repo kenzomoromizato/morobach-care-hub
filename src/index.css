@@ -126,17 +126,17 @@ html {
   }
 
   .bg-paper {
-    background-image: url('./assets/plain-white-paper.jpg');
+    background-image: url('./assets/bg-paper.png');
     background-repeat: repeat;
   }
 
   .bg-paper-70 {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('./assets/plain-white-paper.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('./assets/bg-paper.png');
     background-repeat: repeat;
   }
 
   .bg-paper-60 {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('./assets/plain-white-paper.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('./assets/bg-paper.png');
     background-repeat: repeat;
   }
 }

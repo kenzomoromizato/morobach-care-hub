@@ -24,7 +24,7 @@ const DoctorSection = () => {
             Responsabilidade clínica
           </p>
 
-          <h2 className="font-serif text-3xl leading-tight text-[#2f241f] md:text-5xl">
+          <h2 className="font-serif italic text-3xl leading-tight text-[#2f241f] md:text-5xl">
             Os médicos por trás da Morobach
           </h2>
 

@@ -55,7 +55,7 @@ export default function FAQSection() {
 
       <div className="mx-auto max-w-4xl px-6">
         <div className="mb-16 text-center md:mb-20">
-          <h2 className="font-serif text-3xl text-brown-900 md:text-4xl">
+          <h2 className="font-serif italic text-3xl text-brown-900 md:text-4xl">
             Um acompanhamento médico contínuo,
             <br />
             com clareza e proximidade

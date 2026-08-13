@@ -59,7 +59,7 @@ export default function CareModelSection() {
       <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#EDE3D4]/70 to-transparent" />
 
       <motion.div
-        className="mx-auto max-w-5xl px-6"
+        className="mx-auto max-w-6xl px-6"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
@@ -69,34 +69,36 @@ export default function CareModelSection() {
           variants={itemVariants}
           className="mx-auto mb-28 max-w-3xl text-center"
         >
-          <h2 className="font-serif text-3xl text-brown-900 md:text-4xl">
-            O modelo de cuidado Morobach
+          <h2 className="font-serif italic text-[2.6rem]">
+            <span className="text-theme-detail-heavy">O modelo de cuidado</span>{" "}
+            <span className="text-theme-contrast-dark">Morobach</span>
           </h2>
 
           <div className="mx-auto mt-6 h-[2px] w-16 bg-[#D7B273]/60" />
 
-          <p className="mx-auto mt-8 max-w-2xl text-[1.05rem] leading-8 text-brown-600 md:text-[1.1rem]">
+          <p className="mx-auto mt-8 max-w-2xl text-[1rem] font-light leading-8 text-muted-foreground">
             Acompanhamento médico domiciliar contínuo para famílias, baseado nos
             princípios da medicina de família e da atenção primária à saúde.
           </p>
         </motion.div>
 
-        <div className="grid gap-y-16 md:grid-cols-2 md:gap-x-20 lg:grid-cols-4 lg:gap-x-24">
+        <div className="grid gap-y-16 md:grid-cols-2 md:gap-x-16 lg:grid-cols-4 lg:gap-x-14">
           {steps.map((step) => (
             <motion.div
               key={step.number}
               variants={itemVariants}
-              className="flex h-full flex-col items-start"
+              className="flex h-full flex-col items-start pt-6"
+              style={{ borderTop: "1px solid rgba(163, 126, 44, .22)" }}
             >
-              <div className="mb-5 text-base font-medium tracking-[0.32em] text-[#B08A4E] md:text-lg">
+              <div className="mb-5 font-serif italic text-[1.875rem] font-medium tracking-[0.32em] text-[#B08A4E]">
                 {step.number}
               </div>
 
-              <h3 className="mb-5 min-h-[4.8rem] font-serif text-[1.38rem] leading-[1.15] text-brown-900 md:min-h-[5.2rem]">
+              <h3 className="mb-[20px] font-serif italic text-[1.38rem] leading-[1.15] text-brown-900">
                 {step.title}
               </h3>
 
-              <p className="max-w-[24ch] text-[0.97rem] leading-7 text-brown-600">
+              <p className="max-w-[28ch] text-[0.97rem] leading-7 text-muted-foreground">
                 {step.description}
               </p>
             </motion.div>

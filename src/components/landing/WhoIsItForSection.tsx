@@ -45,13 +45,13 @@ const itemVariants = {
 
 export default function WhoIsItForSection() {
   return (
-    <section className="relative bg-white py-36">
+    <section className="relative bg-paper py-36">
       {/* Separação visual da seção anterior */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#D8C2A0]/70 to-transparent" />
       <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#F6EFE6]/65 to-transparent" />
 
       <motion.div
-        className="mx-auto max-w-5xl px-6"
+        className="mx-auto max-w-6xl px-6"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
@@ -61,7 +61,7 @@ export default function WhoIsItForSection() {
           variants={itemVariants}
           className="mx-auto mb-28 max-w-3xl text-center"
         >
-          <h2 className="font-serif text-3xl text-brown-900 md:text-4xl">
+          <h2 className="font-serif italic text-3xl text-brown-900 md:text-4xl">
             Para quem esse cuidado faz sentido
           </h2>
 
@@ -74,18 +74,14 @@ export default function WhoIsItForSection() {
           </p>
         </motion.div>
 
-        <div className="grid gap-y-16 md:grid-cols-3 md:gap-x-14 lg:gap-x-18">
-          {profiles.map((profile, index) => (
+        <div className="grid gap-y-16 md:grid-cols-3 md:divide-x md:divide-[#E9DED0]">
+          {profiles.map((profile) => (
             <motion.div
               key={profile.title}
               variants={itemVariants}
-              className="relative flex h-full flex-col items-center text-center"
+              className="flex h-full flex-col items-center px-8 text-center lg:px-12"
             >
-              {index !== 0 && (
-                <div className="absolute left-0 top-1/2 hidden h-24 -translate-y-1/2 border-l border-[#E9DED0] md:block" />
-              )}
-
-              <h3 className="mb-5 min-h-[4.6rem] max-w-[14ch] font-serif text-[1.38rem] leading-[1.15] text-brown-900 md:min-h-[5rem]">
+              <h3 className="mb-5 min-h-[4.6rem] max-w-[14ch] font-serif italic text-[1.38rem] leading-[1.15] text-brown-900 md:min-h-[5rem]">
                 {profile.title}
               </h3>
 
