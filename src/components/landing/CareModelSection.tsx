@@ -54,9 +54,8 @@ const itemVariants = {
 
 export default function CareModelSection() {
   return (
-    <section id="modelo" className="relative bg-paper py-36">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#CDAE74]/60 to-transparent" />
-      <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#EDE3D4]/70 to-transparent" />
+    <section id="modelo" className="relative bg-paper py-36 md:py-40">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
 
       <motion.div
         className="mx-auto max-w-6xl px-6"
@@ -74,7 +73,7 @@ export default function CareModelSection() {
             <span className="text-theme-contrast-dark">Morobach</span>
           </h2>
 
-          <div className="mx-auto mt-6 h-[2px] w-16 bg-[#D7B273]/60" />
+          <div className="mx-auto mt-6 h-[2px] w-16 bg-primary/60" />
 
           <p className="mx-auto mt-8 max-w-2xl text-[1rem] font-light leading-8 text-muted-foreground">
             Acompanhamento médico domiciliar contínuo para famílias, baseado nos
@@ -87,14 +86,13 @@ export default function CareModelSection() {
             <motion.div
               key={step.number}
               variants={itemVariants}
-              className="flex h-full flex-col items-start pt-6"
-              style={{ borderTop: "1px solid rgba(163, 126, 44, .22)" }}
+              className="flex h-full flex-col items-start border-t border-theme-accent/20 pt-6"
             >
-              <div className="mb-5 font-serif italic text-[1.875rem] font-medium tracking-[0.32em] text-[#B08A4E]">
+              <div className="mb-5 font-serif italic text-[1.875rem] font-medium tracking-[0.32em] text-theme-accent">
                 {step.number}
               </div>
 
-              <h3 className="mb-[20px] font-serif italic text-[1.38rem] leading-[1.15] text-brown-900">
+              <h3 className="mb-[20px] font-serif italic text-[1.38rem] leading-[1.15] text-foreground">
                 {step.title}
               </h3>
 

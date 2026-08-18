@@ -85,7 +85,7 @@ html {
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    /* New theme palette (not yet applied to the site) */
+    /* New theme palette */
     --theme-contrast-dark: 60 4% 10%;
     --theme-subtitle: 30 17% 42%;
     --theme-accent: 41 57% 41%;
@@ -126,8 +126,7 @@ html {
   }
 
   .bg-paper {
-    background-image: url('./assets/bg-paper.png');
-    background-repeat: repeat;
+    background-color: hsl(var(--theme-dominant));
   }
 
   .bg-paper-70 {

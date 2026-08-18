@@ -29,7 +29,7 @@ const HeroSection = ({ topOffset = 0 }: HeroSectionProps) => {
     <section
       id="topo"
       style={{ paddingTop: `calc(6rem + ${topOffset}px)` }}
-      className="relative h-screen min-h-[760px] overflow-hidden bg-brown-950"
+      className="relative h-screen min-h-[760px] overflow-hidden bg-theme-detail-heavy"
     >
       {/* Camada da imagem com parallax perceptível */}
       <motion.div

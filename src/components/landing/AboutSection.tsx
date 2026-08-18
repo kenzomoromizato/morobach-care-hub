@@ -32,7 +32,8 @@ export default function AboutSection() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="sobre" className="bg-paper py-36 md:py-40">
+    <section id="sobre" className="relative bg-paper py-36 md:py-40">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
       <motion.div
         ref={ref}
         variants={containerVariants}
@@ -43,14 +44,14 @@ export default function AboutSection() {
         {/* TEXTO */}
         <motion.div variants={itemVariants} className="order-2 md:order-1">
           <div className="max-w-lg">
-            <h2 className="font-serif italic text-3xl text-brown-900 md:text-4xl">
+            <h2 className="font-serif italic text-3xl text-foreground md:text-4xl">
               Cuidar também é acompanhar a vida
             </h2>
 
             {/* linha editorial */}
-            <div className="mt-6 h-[2px] w-16 bg-[#D7B273]/60"></div>
+            <div className="mt-6 h-[2px] w-16 bg-primary/60"></div>
 
-            <div className="mt-10 space-y-6 text-[1.05rem] leading-8 text-brown-700 md:text-[1.1rem]">
+            <div className="mt-10 space-y-6 text-[1.05rem] leading-8 text-muted-foreground md:text-[1.1rem]">
               <p>
                 Quando a saúde é acompanhada com continuidade, o cuidado deixa
                 de ser apenas uma resposta aos momentos de doença e passa a

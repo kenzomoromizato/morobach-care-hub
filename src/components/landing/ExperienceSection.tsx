@@ -46,7 +46,8 @@ const itemVariants = {
 
 export default function ExperienceSection() {
   return (
-    <section className="bg-paper py-36 md:py-40">
+    <section className="relative bg-paper py-36 md:py-40">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
       <motion.div
         className="mx-auto grid max-w-5xl items-center gap-16 px-6 md:grid-cols-2 md:gap-20"
         variants={containerVariants}
@@ -68,14 +69,14 @@ export default function ExperienceSection() {
         {/* Conteúdo */}
         <motion.div variants={itemVariants}>
           <div className="max-w-lg">
-            <h2 className="font-serif italic text-2xl text-brown-900 md:text-3xl">
+            <h2 className="font-serif italic text-2xl text-foreground md:text-3xl">
               Um cuidado diferente do atendimento episódico
             </h2>
 
             {/* linha editorial */}
-            <div className="mt-4 h-[2px] w-16 bg-[#D7B273]/60"></div>
+            <div className="mt-4 h-[2px] w-16 bg-primary/60"></div>
 
-            <p className="mt-4 mb-6 text-[0.95rem] leading-6 text-brown-600">
+            <p className="mt-4 mb-6 text-[0.95rem] leading-6 text-muted-foreground">
               A Morobach foi construída para oferecer um acompanhamento mais
               profundo, contínuo e criterioso, centrado na saúde da família ao
               longo do tempo.

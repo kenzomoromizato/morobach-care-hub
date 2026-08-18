@@ -11,8 +11,9 @@ const DoctorSection = () => {
     <section
       id="medico"
       ref={ref}
-      className="relative overflow-hidden bg-paper py-24 md:py-32"
+      className="relative overflow-hidden bg-paper py-36 md:py-40"
     >
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
       <div className="mx-auto max-w-7xl px-6 md:px-8 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
@@ -20,15 +21,15 @@ const DoctorSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mx-auto mb-20 max-w-3xl text-center"
         >
-          <p className="mb-4 text-sm uppercase tracking-[0.22em] text-[#8c6a3d]">
+          <p className="mb-4 text-sm uppercase tracking-[0.22em] text-theme-subtitle">
             Responsabilidade clínica
           </p>
 
-          <h2 className="font-serif italic text-3xl leading-tight text-[#2f241f] md:text-5xl">
-            Os médicos por trás da Morobach
+          <h2 className="font-serif italic text-3xl leading-tight text-foreground md:text-5xl">
+            O médico por trás da Morobach
           </h2>
 
-          <div className="mx-auto mt-6 h-px w-20 bg-[#c8a96a]/60" />
+          <div className="mx-auto mt-6 h-px w-20 bg-primary/60" />
         </motion.div>
 
         <div className="space-y-24 md:space-y-28">
@@ -50,23 +51,23 @@ const DoctorSection = () => {
             </div>
 
             <div className="max-w-2xl">
-              <h3 className="font-serif text-3xl leading-tight text-[#2f241f] md:text-4xl">
+              <h3 className="font-serif text-3xl leading-tight text-foreground md:text-4xl">
                 Kenzo Moromizato
               </h3>
 
-              <div className="mt-4 h-px w-16 bg-[#c8a96a]/70" />
+              <div className="mt-4 h-px w-16 bg-primary/70" />
 
-              <p className="mt-5 text-sm uppercase tracking-[0.18em] text-[#6f5a4b]">
+              <p className="mt-5 text-sm uppercase tracking-[0.18em] text-theme-subtitle">
                 Médico
               </p>
 
-              <p className="mt-2 text-sm text-[#6a5648]">CRM-DF 35581</p>
+              <p className="mt-2 text-sm text-theme-subtitle">CRM-DF 35581</p>
 
-              <p className="mt-2 text-sm text-[#6a5648]">
+              <p className="mt-2 text-sm text-theme-subtitle">
                 Formado pela Escola Superior de Ciências da Saúde (ESCS)
               </p>
 
-              <div className="mt-8 space-y-5 text-[1.02rem] leading-8 text-[#4d3f36]">
+              <div className="mt-8 space-y-5 text-[1.02rem] leading-8 text-muted-foreground">
                 <p>
                    A ideia da Morobach começou a se formar ainda durante a graduação em medicina. Ao longo da formação clínica, ficou cada vez mais evidente como a medicina caminhava em direção a uma especialização crescente, com muitos profissionais extremamente preparados em áreas específicas, mas com menos espaço para o acompanhamento contínuo das pessoas ao longo do tempo.
                 </p>

@@ -49,22 +49,20 @@ export default function FAQSection() {
 
   return (
     <section id="faq" className="relative bg-paper py-36 md:py-40">
-      {/* Separação visual do bloco anterior */}
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#D7C2A3]/70 to-transparent" />
-      <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white/55 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
 
       <div className="mx-auto max-w-4xl px-6">
         <div className="mb-16 text-center md:mb-20">
-          <h2 className="font-serif italic text-3xl text-brown-900 md:text-4xl">
+          <h2 className="font-serif italic text-3xl text-foreground md:text-4xl">
             Um acompanhamento médico contínuo,
             <br />
             com clareza e proximidade
           </h2>
 
           {/* linha editorial */}
-          <div className="mx-auto mt-6 h-[2px] w-16 bg-[#D7B273]/60"></div>
+          <div className="mx-auto mt-6 h-[2px] w-16 bg-primary/60"></div>
 
-          <p className="mx-auto mt-8 max-w-2xl text-[1.05rem] leading-8 text-brown-600 md:text-[1.1rem]">
+          <p className="mx-auto mt-8 max-w-2xl text-[1.05rem] leading-8 text-muted-foreground md:text-[1.1rem]">
             Se você busca um cuidado mais próximo, organizado e orientado para
             prevenção, a Morobach pode ser o início de uma nova forma de
             acompanhar a saúde da sua família.
@@ -72,23 +70,23 @@ export default function FAQSection() {
         </div>
 
         {/* FAQ */}
-        <div className="border-t border-[#DDCFBD]">
+        <div className="border-t border-border">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
 
             return (
-              <div key={faq.question} className="border-b border-[#DDCFBD]">
+              <div key={faq.question} className="border-b border-border">
                 <button
                   type="button"
                   onClick={() => toggle(index)}
                   className="flex w-full items-center justify-between gap-6 py-6 text-left md:py-7"
                 >
-                  <span className="font-serif text-[1.18rem] leading-snug text-brown-900 md:text-[1.28rem]">
+                  <span className="font-serif text-[1.18rem] leading-snug text-foreground md:text-[1.28rem]">
                     {faq.question}
                   </span>
 
                   <ChevronDown
-                    className={`h-5 w-5 shrink-0 text-[#B08A4E] transition-transform duration-300 ${
+                    className={`h-5 w-5 shrink-0 text-theme-accent transition-transform duration-300 ${
                       isOpen ? "rotate-180" : ""
                     }`}
                   />
@@ -103,7 +101,7 @@ export default function FAQSection() {
                       transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                       className="overflow-hidden"
                     >
-                      <p className="max-w-3xl pb-6 pr-10 text-[0.99rem] leading-7 text-brown-600 md:pb-7 md:text-[1rem]">
+                      <p className="max-w-3xl pb-6 pr-10 text-[0.99rem] leading-7 text-muted-foreground md:pb-7 md:text-[1rem]">
                         {faq.answer}
                       </p>
                     </motion.div>
@@ -125,14 +123,14 @@ export default function FAQSection() {
             Agendar conversa inicial
           </a>
           
-          <p className="mt-4 text-sm text-[#6a5648]">
+          <p className="mt-4 text-sm text-theme-subtitle">
             Sem compromisso. A conversa inicial é um primeiro passo para entender a sua necessidade.
           </p>
         </div>
 
         {/* Contato e copyright */}
-        <div className="mt-20 border-t border-[#DDCFBD] pt-10 text-center">
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-brown-700">
+        <div className="mt-20 border-t border-border pt-10 text-center">
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-muted-foreground">
             <a
               href="https://instagram.com/morobach"
               target="_blank"
@@ -162,7 +160,7 @@ export default function FAQSection() {
             </a>
           </div>
 
-          <p className="mt-6 text-xs tracking-[0.08em] text-brown-500">
+          <p className="mt-6 text-xs tracking-[0.08em] text-muted-foreground/60">
             © {new Date().getFullYear()} Morobach. Todos os direitos reservados.
           </p>
         </div>

@@ -25,14 +25,14 @@ const Navbar = ({ topOffset = 0 }: NavbarProps) => {
   }, []);
 
   const linkColor = scrolled
-    ? "text-[#4b3c33] hover:text-[#8c6a3d]"
+    ? "text-foreground hover:text-primary"
     : "text-theme-dominant hover:text-theme-dominant/80";
 
   const iconColor = scrolled ? "text-theme-accent" : "text-theme-dominant";
-  const wordmarkColor = scrolled ? "text-[#4b3c33]" : "text-theme-dominant";
+  const wordmarkColor = scrolled ? "text-foreground" : "text-theme-dominant";
 
   const ctaColor = scrolled
-    ? "border-[#c8a96a] text-[#3e3128]"
+    ? "border-primary text-foreground"
     : "border-theme-dominant text-theme-dominant";
 
   return (
@@ -43,7 +43,7 @@ const Navbar = ({ topOffset = 0 }: NavbarProps) => {
       style={{ top: topOffset }}
       className={`fixed inset-x-0 z-50 border-b transition-all duration-500 ${
         scrolled
-           ? "border-[#c8a96a]/20 bg-[#f7f2ea]/85 backdrop-blur-xl shadow-[0_8px_30px_rgba(43,31,23,0.06)]"
+           ? "border-primary/20 bg-theme-dominant/85 backdrop-blur-xl shadow-[0_8px_30px_rgba(43,31,23,0.06)]"
            : "border-transparent bg-transparent shadow-none"
       }`}
     >
@@ -111,7 +111,7 @@ const Navbar = ({ topOffset = 0 }: NavbarProps) => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="overflow-hidden border-t border-[#c8a96a]/20 bg-[#f7f2ea] md:hidden"
+            className="overflow-hidden border-t border-primary/20 bg-theme-dominant md:hidden"
           >
             <nav className="flex flex-col items-center gap-6 px-6 py-8">
               {navLinks.map((link) => (
@@ -119,7 +119,7 @@ const Navbar = ({ topOffset = 0 }: NavbarProps) => {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="text-[0.95rem] tracking-[0.1em] text-[#4b3c33] transition-colors duration-300 hover:text-[#8c6a3d]"
+                  className="text-[0.95rem] tracking-[0.1em] text-foreground transition-colors duration-300 hover:text-primary"
                 >
                   {link.label}
                 </a>
@@ -128,7 +128,7 @@ const Navbar = ({ topOffset = 0 }: NavbarProps) => {
               <a
                 href="https://wa.me/556135323082?text=Olá,%20gostaria%20de%20mais%20informações%20a%20respeito%20da%20conversa%20inicial%20proposta%20pela%20Morobach."
                 onClick={() => setMobileOpen(false)}
-                className="mt-2 w-full max-w-xs rounded-full border border-[#c8a96a] px-5 py-3 text-center text-sm tracking-[0.06em] text-[#3e3128] transition-all duration-300 hover:border-theme-detail-heavy hover:bg-theme-detail-heavy hover:text-white"
+                className="mt-2 w-full max-w-xs rounded-full border border-primary px-5 py-3 text-center text-sm tracking-[0.06em] text-foreground transition-all duration-300 hover:border-theme-detail-heavy hover:bg-theme-detail-heavy hover:text-white"
               >
                 Contato
               </a>

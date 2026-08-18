@@ -1,15 +1,18 @@
 import { X } from "lucide-react";
 
+// Flip to false to hide the announcement bar site-wide — layout (navbar/hero offset) adjusts automatically.
+export const ANNOUNCEMENT_ENABLED = false;
+export const ANNOUNCEMENT_MESSAGE = "Aviso: em breve novidades";
+
 interface AnnouncementBarProps {
-  message: string;
   onClose: () => void;
 }
 
-const AnnouncementBar = ({ message, onClose }: AnnouncementBarProps) => {
+const AnnouncementBar = ({ onClose }: AnnouncementBarProps) => {
   return (
     <div className="fixed inset-x-0 top-0 z-[60] flex h-10 items-center justify-center bg-theme-detail-heavy px-10">
       <p className="text-center text-sm font-medium uppercase tracking-[0.18em] text-theme-dominant">
-        {message}
+        {ANNOUNCEMENT_MESSAGE}
       </p>
       <button
         type="button"

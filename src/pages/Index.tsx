@@ -9,21 +9,20 @@ import ExperienceSection from "@/components/landing/ExperienceSection";
 import FAQSection from "@/components/landing/FAQSection";
 import Navbar from "@/components/landing/Navbar";
 import FloatingCTA from "@/components/landing/FloatingCTA";
-import AnnouncementBar from "@/components/landing/AnnouncementBar";
+import AnnouncementBar, {
+  ANNOUNCEMENT_ENABLED,
+} from "@/components/landing/AnnouncementBar";
 
 const ANNOUNCEMENT_HEIGHT = 40;
 
 const Index = () => {
-  const [announcementOpen, setAnnouncementOpen] = useState(true);
+  const [announcementOpen, setAnnouncementOpen] = useState(ANNOUNCEMENT_ENABLED);
   const topOffset = announcementOpen ? ANNOUNCEMENT_HEIGHT : 0;
 
   return (
     <main>
       {announcementOpen && (
-        <AnnouncementBar
-          message="Aviso: em breve novidades"
-          onClose={() => setAnnouncementOpen(false)}
-        />
+        <AnnouncementBar onClose={() => setAnnouncementOpen(false)} />
       )}
       <Navbar topOffset={topOffset} />
       <FloatingCTA />
